@@ -64,9 +64,9 @@
   nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:22px 34px;transition:padding .4s var(--ease),background .4s var(--ease),border-color .4s var(--ease);border-bottom:1px solid transparent}
   nav.scrolled{background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(16px);padding:14px 34px;border-bottom-color:var(--line)}
   .logo{display:flex;align-items:center;gap:11px;font-family:var(--display);font-size:18px;letter-spacing:.02em;z-index:210}
-  .logo .mark{width:36px;height:36px;border:1px solid var(--accent);border-radius:50%;display:grid;place-items:center;font-size:12px;letter-spacing:.03em;color:var(--accent);font-weight:500;flex-shrink:0;font-family:var(--sans)}
   .logo b{font-weight:500}.logo .full{white-space:nowrap}
   .logo-img{height:44px;width:auto;border-radius:9px}
+  .logo .mark-img{width:36px;height:36px;border-radius:50%;border:1px solid var(--accent);object-fit:cover;flex-shrink:0}
   .navlinks{display:flex;align-items:center;gap:34px}
   .navlinks a{font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute);transition:.25s}
   .navlinks a:hover{color:var(--ink)}
@@ -485,7 +485,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="#top" class="logo"><span class="mark">MVM</span><span class="full">Motion&nbsp;<b>Visual</b>&nbsp;Media</span></a>
+        <a href="#top" class="logo"><img src="assets/mvm-logo-wordmark.png" alt="Motion Visual Media" class="mark-img"><span class="full">Motion&nbsp;<b>Visual</b>&nbsp;Media</span></a>
         <p>Cinematic brand storytelling for founders and businesses ready to stand out. Based in Charlotte, NC.</p>
       </div>
       <div class="foot-col"><h4>Explore</h4><a href="#work">Work</a><a href="#services">Services</a><a href="#shows">Shows</a><a href="#about">About</a></div>
