@@ -168,7 +168,7 @@
   .shows-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
   .show{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
   .show-imgs{display:grid;grid-template-columns:1fr 1fr;gap:0}
-  .show-imgs.four{grid-template-columns:1fr 1fr}
+  .show-imgs.four{grid-template-columns:repeat(4,1fr)}
   .show-imgs.two{grid-template-columns:1fr 1fr}
   .show-imgs.two img{aspect-ratio:4/5}
   .show-imgs img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 28%;filter:saturate(.92)}
@@ -234,6 +234,10 @@
   .modal-head{margin-bottom:24px}
   .modal-head h3{font-size:clamp(24px,3vw,32px);margin:12px 0 10px}
   .modal-head p{color:var(--ink-mute);font-size:14.5px;max-width:48ch}
+  /* SHOWREEL LIGHTBOX */
+  .lightbox-frame{position:relative;z-index:2;width:min(1080px,100%);aspect-ratio:16/9;background:#000;box-shadow:var(--shadow)}
+  .lightbox-frame iframe{width:100%;height:100%;border:0;display:block}
+  .lightbox-frame .modal-close{top:-50px;right:0;color:#fff;border-color:rgba(255,255,255,.4)}
   .intake{text-align:left}
   .intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .fld{display:flex;flex-direction:column;gap:7px}
@@ -308,15 +312,30 @@
     <h1>Stories worth<br><em>remembering.</em></h1>
     <p class="lead">For founders and brands ready to look the way they actually feel.</p>
     <div class="hero-cta">
-      <a href="#work" class="btn btn-solid">View the Work</a>
+      <a href="#start" class="btn btn-solid">Start Here</a>
       <a href="#contact" class="btn btn-ghost">Start a Project</a>
     </div>
   </div>
   <div class="scroll-cue"><span>Scroll</span><span class="ln"></span></div>
 </header>
 
+<!-- START HERE — momentum offers -->
+<div class="svc-wrap">
+  <section class="wrap" id="start">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Start Here</span>
+      <h2>Three ways to begin.</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><span class="num">01 · $89</span><h3>Professional Headshots</h3><p>Your LinkedIn photo is doing business for you whether you've updated it or not. Delivered in 48 hours, personally reviewed by a 15-year pro.</p><ul><li>5 polished headshots · 3 styles</li><li>No studio visit — done from a selfie</li><li>LinkedIn-optimized · 1 revision round</li></ul><p style="margin-top:1rem"><a href="https://headshots.motionvisualmedia.com" target="_blank" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Order your headshots →</a></p></div>
+      <div class="svc reveal"><span class="num">02 · $250</span><h3>Life Update Session</h3><p>When's the last time you took a photo that looks like who you've become? A Charlotte portrait session built around your growth, not just your angles.</p><ul><li>60-minute in-person session</li><li>5 professionally edited images</li><li>Charlotte, NC locations</li></ul><p style="margin-top:1rem"><a href="#contact" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Book your session →</a></p></div>
+      <div class="svc reveal"><span class="num">03 · From $1,500</span><h3>Story Film</h3><p>A cinematic pilot episode for your brand — one shoot day, one film that shows what a documentary lens does for the story you're building.</p><ul><li>60–90 second cinematic brand film</li><li>3 vertical social cut-downs</li><li>The starting point for ongoing work</li></ul><p style="margin-top:1rem"><a href="#contact" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Start the conversation →</a></p></div>
+    </div>
+  </section>
+</div>
+
 <!-- FULL-BLEED FEATURE REEL -->
-<div class="feature" id="feature" onclick="window.open('https://www.youtube.com/@InGoodConnects','_blank')">
+<div class="feature" id="feature" onclick="openReel()" role="button" tabindex="0" aria-label="Play showreel" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openReel()}">
   <img src="assets/deangelo_chair.jpg" alt="Founder film still" id="featureImg">
   <div class="feature-bars"></div>
   <div class="feature-cap">
@@ -342,27 +361,10 @@
   </div>
   <div class="work-grid">
     <div class="work span-7 a-land reveal"><img src="assets/deangelo_couch.jpg" alt="Founder film"><div class="work-cap"><div class="t">Locked In</div><div class="s">Founder Film · FFB Enterprises</div></div></div>
-    <div class="work span-5 a-land reveal"><img src="assets/town_hall_woman.jpg" alt="Brand story film"><div class="work-cap"><div class="t">In Her Words</div><div class="s">Brand Story &amp; Testimonial</div></div></div>
     <div class="work span-5 a-tall reveal"><img src="assets/editorial_stool.jpg" alt="Editorial portrait"><div class="work-cap"><div class="t">Studio Series</div><div class="s">Editorial Portrait</div></div></div>
-    <div class="work span-7 a-land reveal"><img src="assets/panel_woman.jpg" alt="Brand documentary"><div class="work-cap"><div class="t">In the Room</div><div class="s">Brand Documentary</div></div></div>
-    <div class="work span-12 a-wide reveal"><img src="assets/vegas_house.jpg" alt="Cinematic establishing shot"><div class="work-cap"><div class="t">On Location</div><div class="s">Cinematic B-Roll · Las Vegas</div></div></div>
+    <div class="work span-12 a-wide reveal"><img src="assets/town_hall_woman.jpg" alt="Brand story film"><div class="work-cap"><div class="t">In Her Words</div><div class="s">Brand Story &amp; Testimonial</div></div></div>
   </div>
 </section>
-
-<!-- START HERE — momentum offers -->
-<div class="svc-wrap">
-  <section class="wrap" id="start">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Start Here</span>
-      <h2>Three ways to begin.</h2>
-    </div>
-    <div class="svc-grid">
-      <div class="svc reveal"><span class="num">01 · $89</span><h3>Professional Headshots</h3><p>Your LinkedIn photo is doing business for you whether you've updated it or not. Delivered in 48 hours, personally reviewed by a 15-year pro.</p><ul><li>5 polished headshots · 3 styles</li><li>No studio visit — done from a selfie</li><li>LinkedIn-optimized · 1 revision round</li></ul><p style="margin-top:1rem"><a href="https://mckellarview-ai-headshots.netlify.app" target="_blank" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Order your headshots →</a></p></div>
-      <div class="svc reveal"><span class="num">02 · $250</span><h3>Life Update Session</h3><p>When's the last time you took a photo that looks like who you've become? A Charlotte portrait session built around your growth, not just your angles.</p><ul><li>60-minute in-person session</li><li>5 professionally edited images</li><li>Charlotte, NC locations</li></ul><p style="margin-top:1rem"><a href="#contact" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Book your session →</a></p></div>
-      <div class="svc reveal"><span class="num">03 · From $1,500</span><h3>Story Film</h3><p>A cinematic pilot episode for your brand — one shoot day, one film that shows what a documentary lens does for the story you're building.</p><ul><li>60–90 second cinematic brand film</li><li>3 vertical social cut-downs</li><li>The starting point for ongoing work</li></ul><p style="margin-top:1rem"><a href="#contact" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Start the conversation →</a></p></div>
-    </div>
-  </section>
-</div>
 
 <!-- SERVICES -->
 <div class="svc-wrap">
@@ -375,6 +377,22 @@
       <div class="svc reveal"><span class="num">Film</span><h3>Brand &amp; Founder Films</h3><p>The story behind the business — told cinematically, built to convert.</p><ul><li>Hero brand film</li><li>Founder &amp; testimonial features</li><li>Scripting &amp; creative direction</li><li>Color grade &amp; licensed sound</li></ul></div>
       <div class="svc reveal"><span class="num">Moments</span><h3>Select Events &amp; Launches</h3><p>Brand launches, milestones, and signature occasions — covered for the story, not just the record.</p><ul><li>Launch &amp; milestone films</li><li>Multicam + drone coverage</li><li>Same-week teaser delivery</li><li>Vertical social cut-downs</li></ul></div>
       <div class="svc reveal"><span class="num">Photo</span><h3>Brand Photography</h3><p>Editorial imagery that elevates how the world sees you online.</p><ul><li>Studio &amp; on-location portraits</li><li>Product &amp; lifestyle stills</li><li>Detail &amp; flat-lay styling</li><li>Full usage rights</li></ul></div>
+    </div>
+  </section>
+</div>
+
+<!-- PROCESS -->
+<div class="svc-wrap">
+  <section class="wrap" id="process">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The Process</span>
+      <h2>From first call to final cut.</h2>
+    </div>
+    <div class="proc">
+      <div class="step reveal"><span class="n"></span><div class="k">First</div><h3>Discovery</h3><p>A call to understand the story, the goal, and the audience. We map the right scope together.</p></div>
+      <div class="step reveal"><span class="n"></span><div class="k">Then</div><h3>Pre-Production</h3><p>Concept, mood board, shot list, locations, and schedule — so the shoot day runs clean.</p></div>
+      <div class="step reveal"><span class="n"></span><div class="k">The Day</div><h3>Production</h3><p>Cinematic capture with intention. We shoot for the edit, not just to roll.</p></div>
+      <div class="step reveal"><span class="n"></span><div class="k">Finally</div><h3>Post &amp; Delivery</h3><p>Editing, color, sound, and multi-format delivery — film, square, and vertical from one master.</p></div>
     </div>
   </section>
 </div>
@@ -418,22 +436,6 @@
     </div>
   </div>
 </section>
-
-<!-- PROCESS -->
-<div class="svc-wrap">
-  <section class="wrap" id="process">
-    <div class="sec-head reveal">
-      <span class="eyebrow">The Process</span>
-      <h2>From first call to final cut.</h2>
-    </div>
-    <div class="proc">
-      <div class="step reveal"><span class="n"></span><div class="k">First</div><h3>Discovery</h3><p>A call to understand the story, the goal, and the audience. We map the right scope together.</p></div>
-      <div class="step reveal"><span class="n"></span><div class="k">Then</div><h3>Pre-Production</h3><p>Concept, mood board, shot list, locations, and schedule — so the shoot day runs clean.</p></div>
-      <div class="step reveal"><span class="n"></span><div class="k">The Day</div><h3>Production</h3><p>Cinematic capture with intention. We shoot for the edit, not just to roll.</p></div>
-      <div class="step reveal"><span class="n"></span><div class="k">Finally</div><h3>Post &amp; Delivery</h3><p>Editing, color, sound, and multi-format delivery — film, square, and vertical from one master.</p></div>
-    </div>
-  </section>
-</div>
 
 <!-- ABOUT -->
 <section class="wrap" id="about">
@@ -507,6 +509,15 @@
   </div>
 </div>
 
+<!-- SHOWREEL LIGHTBOX -->
+<div class="modal" id="reelModal" aria-hidden="true">
+  <div class="modal-scrim" id="reelScrim"></div>
+  <div class="lightbox-frame" role="dialog" aria-modal="true" aria-label="Showreel video player">
+    <button class="modal-close" id="closeReel" aria-label="Close">&times;</button>
+    <iframe id="reelFrame" title="Motion Visual Media showreel" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -536,7 +547,12 @@
   function openModal(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
   function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
   openBtn.addEventListener('click',openModal);closeBtn.addEventListener('click',closeModal);scrim.addEventListener('click',closeModal);
-  addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal()});
+  const reel=document.getElementById('reelModal'),reelFrame=document.getElementById('reelFrame');
+  function openReel(){reelFrame.src='https://www.youtube.com/embed/videoseries?list=UUaaSc_mD6drCksacZK_c_2A&autoplay=1&rel=0';reel.classList.add('open');reel.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+  function closeReel(){reel.classList.remove('open');reel.setAttribute('aria-hidden','true');reelFrame.src='about:blank';document.body.style.overflow=''}
+  document.getElementById('closeReel').addEventListener('click',closeReel);
+  document.getElementById('reelScrim').addEventListener('click',closeReel);
+  addEventListener('keydown',e=>{if(e.key==='Escape'){if(modal.classList.contains('open'))closeModal();if(reel.classList.contains('open'))closeReel()}});
   document.querySelectorAll('a[href="#contact"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();closeMenu();openModal()}));
   const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
