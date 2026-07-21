@@ -142,7 +142,8 @@
   .hero-shot:first-child,.hero-shot-secondary{aspect-ratio:16/9;width:100%}
   .hero-shot img{width:100%;height:100%;object-fit:cover}
   .hero-shot:first-child img{object-position:center center}
-  .hero-shot-secondary img{object-position:center 24%}
+  /* Sam's portrait is intentionally top-aligned so the composition never trims his head on wider screens. */
+  .hero-shot-secondary img{object-position:center top}
   .hero-proof-note{position:absolute;left:18px;bottom:18px;z-index:3;background:color-mix(in srgb,var(--bg) 82%,transparent);border:1px solid var(--line-2);border-radius:12px;padding:13px 16px;max-width:250px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
   .hero-proof-note strong{display:block;font-family:var(--display);font-size:18px;font-weight:400;color:var(--ink)}
   .hero-proof-note span{display:block;color:var(--ink-faint);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
@@ -167,7 +168,8 @@
   .sec-head p{color:var(--ink-mute);font-size:clamp(15px,1.3vw,17px)}
 
   /* WORK */
-  .work-rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(320px,40vw,520px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 1px 0 1px;padding-bottom:20px;overscroll-behavior-inline:contain;scrollbar-color:var(--accent-deep) transparent;scrollbar-width:thin}
+  .work-rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(320px,40vw,520px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 1px 0 1px;padding-bottom:12px;overscroll-behavior-inline:contain;scrollbar-width:none}
+  .work-rail::-webkit-scrollbar{display:none}
   .work-rail::-webkit-scrollbar,.svc-grid::-webkit-scrollbar,.portrait-work-grid::-webkit-scrollbar{height:3px}
   .work-rail::-webkit-scrollbar-track,.svc-grid::-webkit-scrollbar-track,.portrait-work-grid::-webkit-scrollbar-track{background:transparent}
   .work-rail::-webkit-scrollbar-thumb,.svc-grid::-webkit-scrollbar-thumb,.portrait-work-grid::-webkit-scrollbar-thumb{background:var(--accent-deep);border-radius:999px}
@@ -184,7 +186,15 @@
   .work-cap .t{font-family:var(--display);font-size:clamp(20px,2vw,28px);line-height:1.08;color:#fff}
   [data-theme="light"] .work-cap .t{color:#fff}
   .work-cap .s{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-top:7px}
-  .rail-hint{margin-top:12px;text-align:right;color:var(--ink-faint);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .rail-controls{display:grid;grid-template-columns:minmax(180px,46%) 1fr;align-items:center;gap:18px;margin-top:15px}
+  .rail-slider{appearance:none;-webkit-appearance:none;width:100%;height:4px;border-radius:999px;background:linear-gradient(90deg,var(--accent-deep) var(--rail-progress,0%),var(--line-2) var(--rail-progress,0%));cursor:pointer;outline-offset:6px}
+  .rail-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:11px;height:11px;border:2px solid var(--bg);border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--accent-deep);cursor:grab}
+  .rail-slider::-moz-range-thumb{width:9px;height:9px;border:2px solid var(--bg);border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--accent-deep);cursor:grab}
+  .rail-actions{display:flex;justify-content:flex-end;align-items:center;gap:9px}
+  .rail-hint{margin:0 10px 0 0;color:var(--ink-faint);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+  .rail-arrow{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:50%;background:color-mix(in srgb,var(--panel) 84%,transparent);color:var(--ink);font:inherit;font-size:22px;line-height:1;cursor:pointer;transition:opacity .25s var(--ease),transform .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease)}
+  .rail-arrow:hover:not(:disabled),.rail-arrow:focus-visible:not(:disabled){background:var(--accent);color:var(--bg);border-color:var(--accent);transform:translateY(-2px)}
+  .rail-arrow:disabled{opacity:0;pointer-events:none;transform:scale(.8)}
 
   /* SERVICES */
   .svc-wrap{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -322,6 +332,7 @@
     .hero-layout{gap:30px}.hero-proof{min-height:0;gap:8px}.hero-shot{border-radius:14px}.hero-shot-secondary{aspect-ratio:2/3}.hero-shot-secondary img{object-position:center top}.hero-proof-note{left:10px;bottom:10px;max-width:205px;padding:10px 12px}.hero-proof-note strong{font-size:15px}.hero-proof-note span{font-size:9px}
     section{padding:68px 0}.sec-head{margin-bottom:38px}.portrait-work-section{padding-top:64px}.about-section{margin-top:28px;padding-top:72px;background:linear-gradient(180deg,var(--bg-soft),transparent 30%)}
     .work-rail{grid-auto-columns:calc(100vw - 54px);gap:12px;margin:0 -20px;padding:0 20px 14px;scroll-padding-left:20px}
+    .rail-controls{grid-template-columns:1fr auto;gap:12px;margin-top:12px}.rail-hint{display:none}.rail-arrow{width:36px;height:36px}
     .svc-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc(100vw - 54px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;overscroll-behavior-inline:contain;margin:0 -20px;padding:0 20px 14px}
     .svc{scroll-snap-align:start;scroll-snap-stop:always;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--panel) 74%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}.svc:last-child{border:1px solid var(--line)}
     .portrait-work-grid{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;overscroll-behavior-inline:contain;margin:0 -20px;padding:0 20px 10px}
@@ -418,7 +429,14 @@
     <div class="work reveal"><img src="assets/portfolio_creative_flowers.jpg" alt="Creative studio portrait with flowers" loading="lazy"><div class="work-cap"><div class="t">Creative Portrait</div><div class="s">Studio Photography</div></div></div>
     <div class="work product reveal"><img src="assets/portfolio_product_tequila.jpg" alt="Studio product photograph of a bottle, glass, and oranges" loading="lazy"><div class="work-cap"><div class="t">Product Detail</div><div class="s">Product Study</div></div></div>
   </div>
-  <p class="rail-hint">Swipe or scroll to see more.</p>
+  <div class="rail-controls" aria-label="Selected work navigation">
+    <input class="rail-slider" id="workRailSlider" type="range" min="0" max="100" value="0" aria-label="Selected work scroll position">
+    <div class="rail-actions">
+      <p class="rail-hint">Swipe, scroll, or use the arrows.</p>
+      <button class="rail-arrow" id="workRailPrev" type="button" aria-label="Show previous selected work" disabled>&larr;</button>
+      <button class="rail-arrow" id="workRailNext" type="button" aria-label="Show more selected work">&rarr;</button>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
@@ -634,6 +652,20 @@
     history.replaceState(null,'','/#contact');
   }
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const workRail=document.querySelector('.work-rail');
+  const workRailSlider=document.getElementById('workRailSlider');
+  const workRailPrev=document.getElementById('workRailPrev');
+  const workRailNext=document.getElementById('workRailNext');
+  if(workRail&&workRailSlider&&workRailPrev&&workRailNext){
+    const syncWorkRail=()=>{const max=Math.max(workRail.scrollWidth-workRail.clientWidth,0);const value=max?Math.round(workRail.scrollLeft/max*100):0;workRailSlider.value=value;workRailSlider.style.setProperty('--rail-progress',value+'%');workRailPrev.disabled=workRail.scrollLeft<4;workRailNext.disabled=workRail.scrollLeft>=max-4};
+    const stepWorkRail=direction=>{const card=workRail.querySelector('.work');const step=card?card.getBoundingClientRect().width+18:workRail.clientWidth*.8;workRail.scrollBy({left:direction*step,behavior:reduce?'auto':'smooth'})};
+    workRail.addEventListener('scroll',syncWorkRail,{passive:true});
+    addEventListener('resize',syncWorkRail);
+    workRailSlider.addEventListener('input',()=>{const max=workRail.scrollWidth-workRail.clientWidth;workRail.scrollLeft=max*(Number(workRailSlider.value)/100)});
+    workRailPrev.addEventListener('click',()=>stepWorkRail(-1));
+    workRailNext.addEventListener('click',()=>stepWorkRail(1));
+    syncWorkRail();
+  }
   const heroBg=document.getElementById('heroBg');
   if(!reduce){
     let ticking=false;
