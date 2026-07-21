@@ -11,15 +11,103 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Brand Photography in Charlotte","provider":{"@type":"Organization","name":"Motion Visual Media","url":"https://motionvisualmedia.com/"},"areaServed":"Charlotte, NC","offers":{"@type":"Offer","price":"1250","priceCurrency":"USD","description":"Starting price"}}</script>
+<style>
+  .brand-photography-page .hero{padding-bottom:70px}
+  .brand-photography-page .photo-hero{margin:56px 0 0;overflow:hidden;background:var(--panel)}
+  .brand-photography-page .photo-hero img{display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center top}
+  .brand-photography-page .photo-caption{display:flex;justify-content:space-between;gap:20px;padding:13px 16px;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .brand-photography-page .portrait-story{background:linear-gradient(180deg,rgba(21,35,27,.72),transparent 78%)}
+  .brand-photography-page .portrait-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,.74fr);gap:48px;align-items:end}
+  .brand-photography-page .portrait-heading h2{margin-bottom:0}
+  .brand-photography-page .portrait-heading .intro{margin:0}
+  .brand-photography-page .portrait-gallery{display:grid;grid-template-columns:.72fr 1.28fr;gap:16px;margin-top:48px}
+  .brand-photography-page .portrait-frame{margin:0;overflow:hidden;background:var(--panel)}
+  .brand-photography-page .portrait-frame img{display:block;width:100%;height:100%;object-fit:cover}
+  .brand-photography-page .portrait-frame--executive{min-height:680px}
+  .brand-photography-page .portrait-frame--executive img{object-position:center 16%}
+  .brand-photography-page .portrait-stack{display:grid;grid-template-rows:minmax(300px,1fr) minmax(260px,.78fr);gap:16px}
+  .brand-photography-page .portrait-frame--workspace img{object-position:center 52%}
+  .brand-photography-page .portrait-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .brand-photography-page .portrait-frame--studio img{object-position:center 24%}
+  .brand-photography-page .portrait-frame--lifestyle img{object-position:center 25%}
+  .brand-photography-page .portrait-cta{display:flex;justify-content:space-between;gap:34px;align-items:end;margin-top:42px;padding-top:34px;border-top:1px solid var(--line)}
+  .brand-photography-page .portrait-cta p{max-width:600px;margin:0;color:var(--muted);font-size:18px}
+  @media(max-width:960px){
+    .brand-photography-page .portrait-heading{grid-template-columns:1fr;gap:22px;align-items:start}
+    .brand-photography-page .portrait-frame--executive{min-height:570px}
+    .brand-photography-page .portrait-stack{grid-template-rows:minmax(260px,1fr) minmax(240px,.8fr)}
+  }
+  @media(max-width:720px){
+    .brand-photography-page .hero{padding-bottom:56px}
+    .brand-photography-page .photo-hero{margin-top:40px}
+    .brand-photography-page .photo-hero img{aspect-ratio:4/3;object-position:40% center}
+    .brand-photography-page .photo-caption{padding:11px 12px;font-size:9px}
+    .brand-photography-page .portrait-gallery{grid-template-columns:1fr;gap:10px;margin-top:34px}
+    .brand-photography-page .portrait-frame--executive{min-height:0;aspect-ratio:4/5}
+    .brand-photography-page .portrait-frame--executive img{object-position:center 14%}
+    .brand-photography-page .portrait-stack{grid-template-rows:auto;gap:10px}
+    .brand-photography-page .portrait-frame--workspace{aspect-ratio:4/3}
+    .brand-photography-page .portrait-pair{gap:10px}
+    .brand-photography-page .portrait-pair .portrait-frame{aspect-ratio:3/4}
+    .brand-photography-page .portrait-frame--studio img{object-position:center 20%}
+    .brand-photography-page .portrait-frame--lifestyle img{object-position:center 22%}
+    .brand-photography-page .portrait-cta{display:grid;grid-template-columns:1fr;gap:24px;align-items:start;margin-top:32px;padding-top:28px}
+    .brand-photography-page .portrait-cta .btn{width:100%;text-align:center}
+  }
+</style>
 </head>
-<body>
+<body class="brand-photography-page">
 <nav class="site-nav"><a class="logo" href="/">Motion <b>Visual</b> Media</a><a class="nav-link" href="/#contact">Start a project →</a></nav>
 <main>
-<header class="hero"><div class="wrap"><span class="eyebrow">Brand photography · Charlotte, NC</span><h1>Photographs that make the work feel real.</h1><p>Executive portraits and brand imagery for founders, teams, and professional practices that need a visual presence with more point of view.</p><div class="actions"><a class="btn primary" href="/#contact">Plan a session</a><a class="btn" href="/">View selected work</a></div></div></header>
-<section class="section"><div class="wrap"><span class="eyebrow">Built around the person</span><h2>More than a headshot. A visual presence.</h2><p class="intro">We plan the setting, wardrobe direction, composition, and intended uses before the camera comes out. That gives you photographs that can work across a website, launch, press feature, LinkedIn, and social without looking repetitive.</p><div class="cards"><article class="card"><span class="price">From $1,250</span><h3>Executive portraits</h3><p>Polished, natural portraits for leaders, speakers, consultants, and professionals.</p></article><article class="card"><h3>Personal brand</h3><p>A broader set of images that shows how you work, communicate, and move through the world.</p></article><article class="card"><h3>Commercial imagery</h3><p>Product, hospitality, editorial, and campaign photographs with a clear visual direction.</p></article></div></div></section>
-<section class="section"><div class="wrap"><span class="eyebrow">What to expect</span><h2>A considered shoot, not a rushed photo call.</h2><p class="intro">We keep the client list intentionally small so the work has room for direction, experimentation, and attention to detail. Sessions can take place in studio or on location around Charlotte.</p><div class="actions"><a class="btn primary" href="/#contact">Tell us what you need</a></div></div></section>
-<section class="section"><div class="wrap"><span class="eyebrow">Case study · author portrait</span><div class="case"><img src="assets/sam_blackmon_author.jpg" alt="Sam Blackmon in a red plaid jacket, photographed for his author project by Motion Visual Media" loading="lazy"><div><h2>Sam Blackmon</h2><p>For author Sam Blackmon, the portrait direction needed to feel thoughtful, personal, and connected to the story behind <em>The Turning Point</em>. Motion Visual Media created an author portrait and supporting visual language that gives the project a clear, confident visual identity.</p><a class="btn" href="/#contact">Talk about your story →</a></div></div></div></section>
-<section class="section"><div class="wrap"><span class="eyebrow">Common questions</span><div class="faq"><details><summary>What is the starting price?</summary><p>Executive brand photography starts at $1,250. The final quote depends on the number of looks, locations, people, and intended usage.</p></details><details><summary>Can you direct people who are uncomfortable on camera?</summary><p>Yes. Clear direction is part of the work. The goal is to create photographs that feel like you, not stiff poses you have to perform.</p></details><details><summary>Can photography be combined with video?</summary><p>Yes. Combined photo and video campaigns can be scoped when the same story or production day needs to serve multiple channels.</p></details></div></div></section>
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Brand photography · Charlotte, NC</span>
+      <h1>Photographs that make the work feel real.</h1>
+      <p>Executive portraits, personal brand photography, and natural workplace imagery for founders, leaders, and teams who want to look as credible as their work.</p>
+      <div class="actions"><a class="btn primary" href="/#contact">Plan a session</a><a class="btn" href="/">View selected work</a></div>
+      <figure class="photo-hero">
+        <img src="assets/brand-photography-office-portrait.jpg" alt="Professional seated in a bright office for an executive portrait" fetchpriority="high">
+        <figcaption class="photo-caption"><span>Portraits with a point of view</span><span>Motion Visual Media</span></figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Built around the person</span>
+      <h2>More than a headshot. A visual presence with range.</h2>
+      <p class="intro">We plan the setting, wardrobe direction, composition, and intended uses before the camera comes out. The result is a library of photographs that works across your website, press, LinkedIn, launches, and social without looking repetitive.</p>
+      <div class="cards">
+        <article class="card"><span class="price">From $1,250</span><h3>Executive portraits</h3><p>Polished, natural portraits for leaders, speakers, consultants, and professionals.</p></article>
+        <article class="card"><h3>Personal brand</h3><p>A broader set of images that shows how you work, communicate, and move through the world.</p></article>
+        <article class="card"><h3>Commercial imagery</h3><p>Product, hospitality, editorial, and campaign photographs with a clear visual direction.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section portrait-story">
+    <div class="wrap">
+      <div class="portrait-heading">
+        <div><span class="eyebrow">A useful image library</span><h2>Give people a reason to pause and see you clearly.</h2></div>
+        <p class="intro">A confident close-up, the environment where you work, and a moment that feels lived-in all help customers understand who they are choosing.</p>
+      </div>
+      <div class="portrait-gallery" aria-label="Examples of executive and personal brand photography by Motion Visual Media">
+        <figure class="portrait-frame portrait-frame--executive"><img src="assets/brand-photography-executive-portrait.jpg" alt="Professional wearing glasses photographed for an executive portrait" loading="lazy"></figure>
+        <div class="portrait-stack">
+          <figure class="portrait-frame portrait-frame--workspace"><img src="assets/brand-photography-workspace.jpg" alt="Professional working on a laptop in a bright home setting" loading="lazy"></figure>
+          <div class="portrait-pair">
+            <figure class="portrait-frame portrait-frame--studio"><img src="assets/brand-photography-studio-portrait.jpg" alt="Smiling professional in a light blue suit photographed against a dark background" loading="lazy"></figure>
+            <figure class="portrait-frame portrait-frame--lifestyle"><img src="assets/brand-photography-lifestyle-portrait.jpg" alt="Professional walking through an outdoor shopping district for a lifestyle portrait" loading="lazy"></figure>
+          </div>
+        </div>
+      </div>
+      <div class="portrait-cta"><p>Bring the way you work, lead, and show up into focus with photographs that hold up wherever people meet your brand.</p><a class="btn primary" href="/#contact">Tell us what you need</a></div>
+    </div>
+  </section>
+
+  <section class="section"><div class="wrap"><span class="eyebrow">Case study · author portrait</span><div class="case"><img src="assets/sam_blackmon_author.jpg" alt="Sam Blackmon in a red plaid jacket, photographed for his author project by Motion Visual Media" loading="lazy"><div><h2>Sam Blackmon</h2><p>For author Sam Blackmon, the portrait direction needed to feel thoughtful, personal, and connected to the story behind <em>The Turning Point</em>. Motion Visual Media created an author portrait and supporting visual language that gives the project a clear, confident visual identity.</p><a class="btn" href="/#contact">Talk about your story →</a></div></div></div></section>
+
+  <section class="section"><div class="wrap"><span class="eyebrow">Common questions</span><div class="faq"><details><summary>What is the starting price?</summary><p>Executive brand photography starts at $1,250. The final quote depends on the number of looks, locations, people, and intended usage.</p></details><details><summary>Can you direct people who are uncomfortable on camera?</summary><p>Yes. Clear direction is part of the work. The goal is to create photographs that feel like you, not stiff poses you have to perform.</p></details><details><summary>Can photography be combined with video?</summary><p>Yes. Combined photo and video campaigns can be scoped when the same story or production day needs to serve multiple channels.</p></details></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">Motion Visual Media · Charlotte, NC · <a href="mailto:hello@motionvisualmedia.com">hello@motionvisualmedia.com</a></div></footer>
 </body>
