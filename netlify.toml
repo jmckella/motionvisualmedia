@@ -20,3 +20,18 @@
   from = "/terms"
   to = "/terms.html"
   status = 200
+
+[[redirects]]
+  from = "/brand-films-charlotte"
+  to = "/brand-films-charlotte.html"
+  status = 200
+
+[[redirects]]
+  from = "/brand-photography-charlotte"
+  to = "/brand-photography-charlotte.html"
+  status = 200
+
+[[redirects]]
+  from = "/ongoing-content-charlotte"
+  to = "/ongoing-content-charlotte.html"
+  status = 200
