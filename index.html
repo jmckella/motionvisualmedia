@@ -127,10 +127,10 @@
   .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-start}
   .hero-proof{display:grid;grid-template-columns:1fr;gap:12px;position:relative;min-height:0}
   .hero-shot{position:relative;overflow:hidden;border:1px solid var(--line-2);border-radius:18px;background:var(--panel);box-shadow:var(--shadow)}
-  .hero-shot:first-child,.hero-shot:last-child{aspect-ratio:16/9;width:100%}
+  .hero-shot:first-child,.hero-shot-secondary{aspect-ratio:16/9;width:100%}
   .hero-shot img{width:100%;height:100%;object-fit:cover}
   .hero-shot:first-child img{object-position:center center}
-  .hero-shot:last-child img{object-position:center 24%}
+  .hero-shot-secondary img{object-position:center 24%}
   .hero-proof-note{position:absolute;left:18px;bottom:18px;z-index:3;background:color-mix(in srgb,var(--bg) 82%,transparent);border:1px solid var(--line-2);border-radius:12px;padding:13px 16px;max-width:250px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
   .hero-proof-note strong{display:block;font-family:var(--display);font-size:18px;font-weight:400;color:var(--ink)}
   .hero-proof-note span{display:block;color:var(--ink-faint);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
@@ -368,7 +368,7 @@
       </div>
       <div class="hero-proof" aria-label="Recent Motion Visual Media work">
         <div class="hero-shot"><img src="assets/deangelo_chair.jpg" alt="Film still of a founder seated in an auditorium"></div>
-        <div class="hero-shot"><img src="assets/sam_blackmon_author.jpg" alt="Executive portrait photographed by Motion Visual Media"></div>
+        <div class="hero-shot hero-shot-secondary"><img src="assets/sam_blackmon_author.jpg" alt="Executive portrait photographed by Motion Visual Media"></div>
         <div class="hero-proof-note"><strong>Real people. Real momentum.</strong><span>Film and photography for business</span></div>
       </div>
     </div>
