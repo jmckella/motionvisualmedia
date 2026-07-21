@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Motion Visual Media — Cinematic Brand Storytelling</title>
-<meta name="description" content="Motion Visual Media (MVM) — cinematic film and photography for founders and brands. Charlotte, NC.">
-<meta property="og:title" content="Motion Visual Media — Cinematic Brand Storytelling">
-<meta property="og:description" content="Cinematic film & photography for founders and brands ready to look the way they actually feel. Charlotte, NC.">
+<title>Motion Visual Media — Brand Films, Photography & Content Systems</title>
+<meta name="description" content="Cinematic brand films, executive photography, and ongoing content systems for founders and growing businesses in Charlotte, NC.">
+<link rel="canonical" href="https://motionvisualmedia.com/">
+<meta property="og:title" content="Motion Visual Media — Brand Films, Photography & Content Systems">
+<meta property="og:description" content="We help founders and growing brands look as credible as the businesses they have built. Based in Charlotte, NC.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://motionvisualmedia.com">
 <meta property="og:image" content="assets/deangelo_chair.jpg">
@@ -17,6 +18,23 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://motionvisualmedia.com/#organization","name":"Motion Visual Media","alternateName":"McKellar's View","url":"https://motionvisualmedia.com/","logo":"https://motionvisualmedia.com/assets/mvm-logo-wordmark.png","email":"hello@motionvisualmedia.com","sameAs":["https://www.instagram.com/motionvisualmedia/","https://www.linkedin.com/company/motion-visual-media/"]},
+    {"@type":"LocalBusiness","@id":"https://motionvisualmedia.com/#business","name":"Motion Visual Media","url":"https://motionvisualmedia.com/","image":"https://motionvisualmedia.com/assets/deangelo_chair.jpg","description":"Charlotte-based brand film production, commercial photography, executive portraits, and ongoing content production for founders, professional practices, and growing businesses.","address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"},"areaServed":["Charlotte","North Carolina","United States"],"priceRange":"$$$","parentOrganization":{"@id":"https://motionvisualmedia.com/#organization"}},
+    {"@type":"WebSite","@id":"https://motionvisualmedia.com/#website","url":"https://motionvisualmedia.com/","name":"Motion Visual Media","publisher":{"@id":"https://motionvisualmedia.com/#organization"}},
+    {"@type":"Person","@id":"https://motionvisualmedia.com/#jeremy","name":"Jeremy McKellar","jobTitle":"Founder and Director","worksFor":{"@id":"https://motionvisualmedia.com/#organization"},"url":"https://motionvisualmedia.com/#about"},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What does Motion Visual Media do?","acceptedAnswer":{"@type":"Answer","text":"Motion Visual Media creates brand films, founder videos, commercial photography, executive portraits, and ongoing photo and video content for businesses and people in Charlotte and beyond."}},
+      {"@type":"Question","name":"How much does a project cost?","acceptedAnswer":{"@type":"Answer","text":"Brand films start at $1,500 and brand photography starts at $1,250. Larger or ongoing engagements are scoped around the goals, production needs, and intended use of the work."}},
+      {"@type":"Question","name":"Do you work with individuals or only companies?","acceptedAnswer":{"@type":"Answer","text":"Both. Motion Visual Media works with founders, teams, professional practices, growing businesses, and individuals through its accessible offerings."}},
+      {"@type":"Question","name":"Where are you located?","acceptedAnswer":{"@type":"Answer","text":"Motion Visual Media is based in Charlotte, North Carolina, and works in studio, on location, and remotely depending on the project."}}
+    ]}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -100,15 +118,27 @@
   .mm-foot .eyebrow{display:block;margin-bottom:8px}
   .mm-foot a{font-family:var(--sans);font-size:15px;color:var(--ink-mute);border:none;padding:0}
 
-  /* HERO — type-forward, Bach-like restraint */
-  header{min-height:100svh;position:relative;display:flex;align-items:center;overflow:hidden;padding:120px 0 60px}
+  /* HERO */
+  header{min-height:94svh;position:relative;display:flex;align-items:center;overflow:hidden;padding:128px 0 76px}
   .hero-bg{position:absolute;inset:0;z-index:0;background:var(--hero-glow),var(--bg)}
   .hero-grain{position:absolute;inset:0;z-index:1;opacity:var(--grain-op);pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-  .hero-inner{position:relative;z-index:2;width:100%;text-align:center}
-  .hero h1{font-size:clamp(52px,10vw,150px);margin:26px 0 24px;letter-spacing:-0.02em}
+  .hero-inner{position:relative;z-index:2;width:100%}
+  .hero-layout{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(44px,7vw,100px);align-items:center}
+  .hero-copy{max-width:710px}
+  .hero h1{font-size:clamp(54px,7.3vw,108px);margin:25px 0 26px;letter-spacing:-0.025em}
   .hero h1 em{font-style:italic;color:var(--accent)}
-  .hero .lead{font-size:clamp(16px,1.4vw,19px);color:var(--ink-mute);max-width:40ch;margin:0 auto 40px}
-  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
+  .hero .lead{font-size:clamp(16px,1.4vw,19px);color:var(--ink-mute);max-width:52ch;margin:0 0 38px}
+  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-start}
+  .hero-proof{display:grid;grid-template-columns:1.08fr .92fr;gap:14px;position:relative;min-height:570px}
+  .hero-shot{position:relative;overflow:hidden;border:1px solid var(--line-2);background:var(--panel);box-shadow:var(--shadow)}
+  .hero-shot:first-child{align-self:start;height:520px}
+  .hero-shot:last-child{align-self:end;height:410px;margin-bottom:-24px}
+  .hero-shot img{width:100%;height:100%;object-fit:cover}
+  .hero-shot:first-child img{object-position:center 34%}
+  .hero-shot:last-child img{object-position:center 22%}
+  .hero-proof-note{position:absolute;left:-24px;bottom:28px;z-index:3;background:color-mix(in srgb,var(--bg) 92%,transparent);border:1px solid var(--line-2);padding:15px 18px;max-width:240px;backdrop-filter:blur(14px)}
+  .hero-proof-note strong{display:block;font-family:var(--display);font-size:18px;font-weight:400;color:var(--ink)}
+  .hero-proof-note span{display:block;color:var(--ink-faint);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
   .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink-faint);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
   .scroll-cue .ln{width:1px;height:38px;background:linear-gradient(var(--accent),transparent);animation:cue 2s var(--ease) infinite}
   @keyframes cue{0%{transform:scaleY(0);transform-origin:top}40%{transform:scaleY(1);transform-origin:top}60%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
@@ -152,6 +182,23 @@
   .svc p{color:var(--ink-mute);font-size:15px}
   .svc ul{list-style:none;margin-top:22px}
   .svc li{font-size:13.5px;color:var(--ink-faint);padding:8px 0;border-top:1px solid var(--line);letter-spacing:.02em}
+  .svc .offer-link{display:inline-flex;margin-top:22px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:3px}
+  .svc.featured{background:var(--panel)}
+
+  /* QUIET, SECONDARY OFFERS */
+  .extras-section{padding-top:0}
+  .extras{border:1px solid var(--line);background:var(--bg-soft)}
+  .extras summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:var(--ink-mute);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+  .extras summary::-webkit-details-marker{display:none}
+  .extras summary::after{content:"+";font-family:var(--display);font-size:25px;color:var(--accent);transition:.3s var(--ease)}
+  .extras[open] summary::after{transform:rotate(45deg)}
+  .extras-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+  .extra{padding:30px 28px;border-right:1px solid var(--line)}
+  .extra:last-child{border-right:none}
+  .extra .price{font-family:var(--display);font-style:italic;color:var(--accent);font-size:15px}
+  .extra h3{font-size:22px;margin:12px 0 9px}
+  .extra p{color:var(--ink-mute);font-size:14px;margin-bottom:16px}
+  .extra a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:3px}
 
   /* SHOWS — small two-tile section */
   .shows-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -183,6 +230,13 @@
 
   /* ABOUT */
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+  .faq-grid{max-width:900px;margin:0 auto;border-top:1px solid var(--line)}
+  .faq{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;padding:22px 4px;font-family:var(--display);font-size:clamp(19px,2vw,25px);display:flex;justify-content:space-between;gap:24px;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';font-family:var(--sans);font-size:20px;color:var(--accent);font-weight:300;transition:transform .3s var(--ease)}
+  .faq[open] summary::after{transform:rotate(45deg)}
+  .faq p{max-width:72ch;color:var(--ink-mute);font-size:15px;padding:0 36px 24px 4px}
   .about-img{aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);position:relative}
   .about-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.93)}
   .about-grid h2{font-size:clamp(32px,4vw,54px);margin:18px 0 22px}
@@ -205,6 +259,11 @@
   .foot-col h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;font-family:var(--sans);font-weight:500}
   .foot-col a{display:block;color:var(--ink-mute);font-size:14px;padding:6px 0;transition:.25s}
   .foot-col a:hover{color:var(--accent)}
+  .social-links{display:flex;align-items:center;gap:10px;margin-top:14px}
+  .social-link{display:inline-flex!important;align-items:center;justify-content:center;width:38px;height:38px;padding:0!important;border:1px solid var(--line-2);border-radius:50%;color:var(--ink-mute)!important;transition:.25s var(--ease)}
+  .social-link:hover{color:var(--accent)!important;border-color:var(--accent);transform:translateY(-2px)}
+  .social-link svg{width:17px;height:17px;fill:currentColor}
+  .social-link.email svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7}
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:26px;flex-wrap:wrap;gap:14px}
   .foot-bottom small{font-size:12px;color:var(--ink-faint);letter-spacing:.04em}
 
@@ -250,6 +309,7 @@
 
   @media(max-width:1000px){
     .navlinks{display:none}.burger{display:flex}.nav-cta-desktop{display:none}
+    .hero-layout{grid-template-columns:1fr;gap:50px}.hero-copy{max-width:760px}.hero-proof{max-width:720px;min-height:520px}.hero-shot:first-child{height:470px}.hero-shot:last-child{height:360px}
     .work-grid{grid-template-columns:repeat(6,1fr)}
     .span-7,.span-5,.span-6{grid-column:span 6}.span-12{grid-column:span 6}
     .shows-grid{grid-template-columns:1fr}
@@ -257,9 +317,10 @@
   }
   @media(max-width:760px){
     .wrap{padding:0 22px}nav{padding:16px 22px}nav.scrolled{padding:12px 22px}.logo .full{display:none}
-    header{padding:96px 0 56px;min-height:auto}
-    .hero h1{font-size:clamp(48px,15vw,76px);margin:22px 0 22px}
+    header{padding:108px 0 72px;min-height:auto}
+    .hero h1{font-size:clamp(47px,14vw,72px);margin:22px 0 22px}
     .hero .lead{margin-bottom:30px}
+    .hero-proof{min-height:390px;gap:9px}.hero-shot:first-child{height:350px}.hero-shot:last-child{height:275px;margin-bottom:-12px}.hero-proof-note{left:12px;bottom:10px;max-width:210px;padding:12px 14px}
     .work-grid{grid-template-columns:1fr;gap:14px}
     .span-7,.span-5,.span-6,.span-12{grid-column:span 1}
     .work .a-tall,.work .a-land,.work .a-wide,.work .a-sq{aspect-ratio:4/3}
@@ -269,6 +330,7 @@
     .hero-cta .btn{flex:1;text-align:center}.scroll-cue{display:none}
     .mobile-menu>a{font-size:30px}
     .intake-grid{grid-template-columns:1fr}.intake-foot{flex-direction:column;align-items:stretch}.intake-foot .btn{width:100%}
+    .extras-grid{grid-template-columns:1fr}.extra{border-right:none;border-bottom:1px solid var(--line)}.extra:last-child{border-bottom:none}.extras summary{padding:20px 22px}
     /* Bottom sheet: scrim stays tappable above the card; close is pinned to the viewport so it can't scroll away */
     .modal{padding:0;align-items:flex-end}
     .modal-card{max-width:100%;height:auto;max-height:90vh;border-radius:16px 16px 0 0;padding:60px 22px 32px;transform:none!important}
@@ -305,36 +367,45 @@
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-grain"></div>
   <div class="hero-inner wrap">
-    <span class="eyebrow">Cinematic Film &amp; Photography · Charlotte, NC</span>
-    <h1>Stories worth<br><em>remembering.</em></h1>
-    <p class="lead">For founders and brands ready to look the way they actually feel.</p>
-    <div class="hero-cta">
-      <a href="#start" class="btn btn-solid">Start Here</a>
-      <a href="#contact" class="btn btn-ghost">Start a Project</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <span class="eyebrow">Brand Film &amp; Photography · Charlotte, NC</span>
+        <h1>Look as credible as what you’ve <em>built.</em></h1>
+        <p class="lead">Motion Visual Media is a Charlotte-based brand film and photography studio for founders, professional practices, and growing businesses that need stronger visual communication.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-solid">View the Work</a>
+          <a href="#contact" class="btn btn-ghost">Start a Project</a>
+        </div>
+      </div>
+      <div class="hero-proof" aria-label="Recent Motion Visual Media work">
+        <div class="hero-shot"><img src="assets/deangelo_chair.jpg" alt="Founder portrait created by Motion Visual Media"></div>
+        <div class="hero-shot"><img src="assets/sam_blackmon_author.jpg" alt="Executive portrait photographed by Motion Visual Media"></div>
+        <div class="hero-proof-note"><strong>Real people. Real momentum.</strong><span>Built for launches, brands &amp; authority</span></div>
+      </div>
     </div>
   </div>
-  <div class="scroll-cue"><span>Scroll</span><span class="ln"></span></div>
 </header>
 
-<!-- START HERE — momentum offers -->
+<!-- START HERE — premium offers -->
 <div class="svc-wrap">
   <section class="wrap" id="start">
     <div class="sec-head reveal">
-      <span class="eyebrow">Start Here</span>
-      <h2>Three ways to begin.</h2>
+      <span class="eyebrow">Ways to Work Together</span>
+      <h2>Built around the moment you’re in.</h2>
+      <p>Whether the business needs a stronger first impression or a complete storytelling system, we shape the production around the outcome.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc reveal"><span class="num">01 · $89</span><h3>Professional AI Headshots</h3><p>Your LinkedIn photo is doing business for you whether you've updated it or not. These are AI-generated from a photo you upload — no studio visit — and personally reviewed by a 15-year pro before they reach your inbox in 48 hours.</p><ul><li>AI-generated from a selfie you send</li><li>5 polished headshots · 3 styles</li><li>Pro-reviewed · LinkedIn-optimized · 1 revision round</li></ul><p style="margin-top:1rem"><a href="https://headshots.motionvisualmedia.com" target="_blank" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Order your AI headshots →</a></p></div>
-      <div class="svc reveal"><span class="num">02 · $250</span><h3>Life Update Session</h3><p>When's the last time you took a photo that looks like who you've become? An in-studio portrait session built around your growth, not just your angles.</p><ul><li>45-minute in-studio session</li><li>5 professionally edited images</li><li>Charlotte, NC</li></ul><p style="margin-top:1rem"><a href="#" id="openSession" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Inquire about your session →</a></p></div>
-      <div class="svc reveal"><span class="num">03 · From $1,500</span><h3>Story Film</h3><p>A cinematic pilot episode for your brand — one shoot day, one film that shows what a documentary lens does for the story you're building.</p><ul><li>60–90 second cinematic brand film</li><li>3 vertical social cut-downs</li><li>The starting point for ongoing work</li></ul><p style="margin-top:1rem"><a href="#" id="openFilmIntake" style="color:inherit;text-decoration:underline;text-underline-offset:4px">Start the conversation →</a></p></div>
+      <div class="svc reveal"><span class="num">01 · From $1,250</span><h3>Executive Brand Photography</h3><p>Strategic portraits and brand imagery for leaders whose visual presence needs to match the level of their work.</p><ul><li>Creative planning &amp; visual direction</li><li>Multiple crops, looks, and business uses</li><li>Studio or on-location in Charlotte</li><li>Campaign-specific usage</li></ul><a href="/brand-photography-charlotte" class="offer-link">Explore photography →</a></div>
+      <div class="svc featured reveal"><span class="num">02 · From $1,500</span><h3>Brand Films</h3><p>One focused film for a launch, founder story, or important business moment, with the right assets to carry it further.</p><ul><li>Founder-led or story-driven film</li><li>Interview and cinematic coverage</li><li>Concept and creative direction</li><li>Delivery shaped around your channels</li></ul><a href="/brand-films-charlotte" class="offer-link">Explore brand films →</a></div>
+      <div class="svc reveal"><span class="num">03 · 90 Days</span><h3>Founder Authority Partnership</h3><p>A three-month production system for founders who need consistent visibility without rebuilding the process every week.</p><ul><li>Monthly production sessions</li><li>Founder film &amp; short-form content</li><li>Executive photo library</li><li>Strategy, editing, and delivery</li></ul><a href="#contact" class="offer-link">Explore the partnership →</a></div>
     </div>
   </section>
 </div>
 
 <div class="marquee">
   <div class="marquee-track">
-    <span>Founder Films</span><span>Brand Campaigns</span><span>Documentary</span><span>Brand Photography</span><span>Short-Form Social</span><span>Select Events</span>
-    <span>Founder Films</span><span>Brand Campaigns</span><span>Documentary</span><span>Brand Photography</span><span>Short-Form Social</span><span>Select Events</span>
+    <span>Founder Films</span><span>Brand Campaigns</span><span>Executive Photography</span><span>Content Systems</span><span>Documentary</span><span>Select Events</span>
+    <span>Founder Films</span><span>Brand Campaigns</span><span>Executive Photography</span><span>Content Systems</span><span>Documentary</span><span>Select Events</span>
   </div>
 </div>
 
@@ -342,12 +413,12 @@
 <section id="work" class="wrap">
   <div class="sec-head reveal">
     <span class="eyebrow">Selected Work</span>
-    <h2>The work speaks for itself.</h2>
-    <p>A selection of recent founder films, brand stories, and cinematic coverage.</p>
+    <h2>Work created for a reason.</h2>
+    <p>Founder stories, launch assets, and brand imagery designed to move with the business.</p>
   </div>
   <div class="work-grid">
     <div class="work span-7 a-land reveal"><img src="assets/deangelo_couch.jpg" alt="Founder film"><div class="work-cap"><div class="t">Locked In</div><div class="s">Founder Film · FFB Enterprises</div></div></div>
-    <div class="work span-5 a-tall reveal"><img src="assets/editorial_stool.jpg" alt="Editorial portrait"><div class="work-cap"><div class="t">Studio Series</div><div class="s">Editorial Portrait</div></div></div>
+    <div class="work span-5 a-tall reveal"><img src="assets/sam_blackmon_author.jpg" alt="Executive portrait photographed by Motion Visual Media"><div class="work-cap"><div class="t">Ready for What’s Next</div><div class="s">Executive Portrait · Personal Brand</div></div></div>
     <div class="work span-12 a-wide reveal"><img src="assets/town_hall_woman.jpg" alt="Brand story film"><div class="work-cap"><div class="t">In Her Words</div><div class="s">Brand Story &amp; Testimonial</div></div></div>
   </div>
 </section>
@@ -360,9 +431,9 @@
       <h2>Three ways to build your presence.</h2>
     </div>
     <div class="svc-grid">
-      <div class="svc reveal"><span class="num">Film</span><h3>Brand &amp; Founder Films</h3><p>The story behind the business — told cinematically, built to convert.</p><ul><li>Hero brand film</li><li>Founder &amp; testimonial features</li><li>Scripting &amp; creative direction</li><li>Color grade &amp; licensed sound</li></ul></div>
-      <div class="svc reveal"><span class="num">Moments</span><h3>Select Events &amp; Launches</h3><p>Brand launches, milestones, and signature occasions — covered for the story, not just the record.</p><ul><li>Launch &amp; milestone films</li><li>Multicam + drone coverage</li><li>Same-week teaser delivery</li><li>Vertical social cut-downs</li></ul></div>
-      <div class="svc reveal"><span class="num">Photo</span><h3>Brand Photography</h3><p>Editorial imagery that elevates how the world sees you online.</p><ul><li>Studio &amp; on-location portraits</li><li>Product &amp; lifestyle stills</li><li>Detail &amp; flat-lay styling</li><li>Full usage rights</li></ul></div>
+      <div class="svc reveal"><span class="num">Campaign</span><h3>Brand &amp; Founder Films</h3><p>The story behind the business — told cinematically and built around a real business moment.</p><ul><li>Hero brand film</li><li>Founder &amp; testimonial features</li><li>Scripting &amp; creative direction</li><li>Color grade &amp; licensed sound</li></ul><a href="/brand-films-charlotte" class="offer-link">See the film offering →</a></div>
+      <div class="svc reveal"><span class="num">Consistency</span><h3>Authority Content Systems</h3><p>One intentional production rhythm that turns your expertise into a dependable library of content.</p><ul><li>Monthly content sessions</li><li>Strategic short-form video</li><li>Photo and campaign assets</li><li>Editing &amp; multi-platform delivery</li></ul></div>
+      <div class="svc reveal"><span class="num">Presence</span><h3>Executive Brand Photography</h3><p>Editorial imagery that elevates how the world sees you across launches, websites, press, and social.</p><ul><li>Studio &amp; on-location portraits</li><li>Multiple looks and compositions</li><li>Live creative direction</li><li>Usage tailored to the campaign</li></ul><a href="/brand-photography-charlotte" class="offer-link">See the photography offering →</a></div>
     </div>
   </section>
 </div>
@@ -382,6 +453,27 @@
     </div>
   </section>
 </div>
+
+<!-- QUIET ENTRY POINTS — intentionally secondary to premium work -->
+<section class="wrap extras-section" id="additional-offers">
+  <details class="extras reveal">
+    <summary>Looking for a smaller way to begin?</summary>
+    <div class="extras-grid">
+      <div class="extra">
+        <span class="price">Choose your price · from $100</span>
+        <h3>🏁 Proud to Pay</h3>
+        <p>Five quick studio portraits, a meaningful connection, and an optional short message about something you’re proud of.</p>
+        <a href="/proud-to-pay">See Proud to Pay →</a>
+      </div>
+      <div class="extra">
+        <span class="price">Remote · $89</span>
+        <h3>Virtual Professional Headshots</h3>
+        <p>Five polished, pro-reviewed headshots created from photos you upload—no studio visit required.</p>
+        <a href="https://headshots.motionvisualmedia.com" target="_blank" rel="noopener">Visit the headshot studio →</a>
+      </div>
+    </div>
+  </details>
+</section>
 
 <!-- SHOWS — small, secondary -->
 <section class="wrap" id="shows">
@@ -420,6 +512,21 @@
         <a href="https://thehumblebragexperience.com" target="_blank" rel="noopener" class="lk">Visit the show →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ — plain-language answers for search and prospective clients -->
+<section class="wrap faq-section" id="faq">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Common Questions</span>
+    <h2>Before we make something together.</h2>
+    <p>A few straightforward answers about the work, pricing, and process.</p>
+  </div>
+  <div class="faq-grid">
+    <details class="faq reveal"><summary>What does Motion Visual Media do?</summary><p>Motion Visual Media creates brand films, founder videos, commercial photography, executive portraits, and ongoing photo and video content for businesses and people in Charlotte and beyond.</p></details>
+    <details class="faq reveal"><summary>How much does a project cost?</summary><p>Brand films start at $1,500 and brand photography starts at $1,250. Larger or ongoing engagements are scoped around the goals, production needs, and intended use of the work.</p></details>
+    <details class="faq reveal"><summary>Do you work with individuals or only companies?</summary><p>Both. The main studio works with founders, teams, professional practices, and growing businesses. Proud to Pay and Virtual Professional Headshots offer more accessible ways for individuals to work with the brand.</p></details>
+    <details class="faq reveal"><summary>Where are you located?</summary><p>Motion Visual Media is based in Charlotte, North Carolina, and works in studio, on location, and remotely depending on the project.</p></details>
   </div>
 </section>
 
@@ -541,7 +648,19 @@
         <p>Cinematic brand storytelling for founders and businesses ready to stand out. Based in Charlotte, NC.</p>
       </div>
       <div class="foot-col"><h4>Explore</h4><a href="#work">Work</a><a href="#services">Services</a><a href="#shows">Shows</a><a href="#about">About</a></div>
-      <div class="foot-col"><h4>Connect</h4><a href="#contact">Start a Project</a><a href="mailto:hello@motionvisualmedia.com">Email</a><a href="https://www.instagram.com/motionvisualmedia/" target="_blank" rel="noopener">Instagram</a></div>
+      <div class="foot-col"><h4>Connect</h4><a href="#contact">Start a Project</a><a href="mailto:hello@motionvisualmedia.com">Email</a><a href="https://www.instagram.com/motionvisualmedia/" target="_blank" rel="noopener">Instagram</a>
+        <div class="social-links" aria-label="Motion Visual Media social links">
+          <a class="social-link" href="https://www.instagram.com/motionvisualmedia/" target="_blank" rel="noopener" aria-label="Motion Visual Media on Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/company/motion-visual-media/" target="_blank" rel="noopener" aria-label="Motion Visual Media on LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.5a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM3.3 9h3.8v11.7H3.3V9Zm6.1 0h3.6v1.6h.1c.5-.9 1.7-2 3.6-2 3.8 0 4.5 2.5 4.5 5.8v6.3h-3.8v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9v5.7H9.4V9Z"/></svg>
+          </a>
+          <a class="social-link email" href="mailto:hello@motionvisualmedia.com" aria-label="Email Motion Visual Media" title="Email Motion Visual Media">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="foot-bottom">
       <small>© 2026 Motion Visual Media. Formerly McKellar's View.</small>
@@ -559,23 +678,14 @@
   burger.addEventListener('click',()=>{const o=document.body.classList.toggle('menu-open');burger.setAttribute('aria-expanded',o?'true':'false')});
   mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
   const modal=document.getElementById('intakeModal'),openBtn=document.getElementById('openIntake'),closeBtn=document.getElementById('closeIntake'),scrim=document.getElementById('modalScrim');
-  // Budget variants: the Story Film entry point widens the brackets for the
-  // $1,500 price point; every other opener restores the retainer defaults.
-  const budgetSel=modal.querySelector('select[name="budget"]'),intakeFine=modal.querySelector('.fineprint'),projTypeSel=modal.querySelector('select[name="project_type"]');
-  const defaultBudgetHTML=budgetSel.innerHTML,defaultFineText=intakeFine.textContent;
-  const filmBudgetHTML='<option value="" disabled selected>Select a range</option><option>$1,500 – $3,000</option><option>$3,000 – $5,000</option><option>$5,000+</option>';
-  function setIntakeVariant(v){
-    if(v==='film'){budgetSel.innerHTML=filmBudgetHTML;intakeFine.textContent='Story Films start at $1,500 — and if your project points toward something bigger, we’ll bring retainer options to the call.';projTypeSel.value='Brand / Founder Film'}
-    else{budgetSel.innerHTML=defaultBudgetHTML;intakeFine.textContent=defaultFineText;projTypeSel.value=''}
-  }
-  function openModal(variant){setIntakeVariant(variant==='film'?'film':'default');modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+  function openModal(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
   function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-  document.getElementById('openFilmIntake').addEventListener('click',e=>{e.preventDefault();openModal('film')});
   openBtn.addEventListener('click',openModal);closeBtn.addEventListener('click',closeModal);scrim.addEventListener('click',closeModal);
   const sessionModal=document.getElementById('sessionModal');
   function openSessionModal(){sessionModal.classList.add('open');sessionModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
   function closeSessionModal(){sessionModal.classList.remove('open');sessionModal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-  document.getElementById('openSession').addEventListener('click',e=>{e.preventDefault();openSessionModal()});
+  const sessionLink=document.getElementById('openSession');
+  if(sessionLink)sessionLink.addEventListener('click',e=>{e.preventDefault();openSessionModal()});
   document.getElementById('closeSession').addEventListener('click',closeSessionModal);
   document.getElementById('sessionScrim').addEventListener('click',closeSessionModal);
   addEventListener('keydown',e=>{if(e.key==='Escape'){if(modal.classList.contains('open'))closeModal();if(sessionModal.classList.contains('open'))closeSessionModal()}});
