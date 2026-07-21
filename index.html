@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Motion Visual Media | Brand Film, Photography and Content</title>
 <meta name="description" content="Brand films, photography, and ongoing content for founders and teams in Charlotte, NC.">
+<link rel="canonical" href="https://motionvisualmedia.com/">
 <meta property="og:title" content="Motion Visual Media | Brand Film, Photography and Content">
 <meta property="og:description" content="Photo and film that make your business easier to trust. Based in Charlotte, NC.">
 <meta property="og:type" content="website">
@@ -17,6 +18,17 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://motionvisualmedia.com/#organization","name":"Motion Visual Media","alternateName":"McKellar's View","url":"https://motionvisualmedia.com/","logo":"https://motionvisualmedia.com/assets/mvm-logo-wordmark.png","email":"hello@motionvisualmedia.com","sameAs":["https://www.instagram.com/motionvisualmedia/","https://www.linkedin.com/company/motion-visual-media/"]},
+    {"@type":"LocalBusiness","@id":"https://motionvisualmedia.com/#business","name":"Motion Visual Media","url":"https://motionvisualmedia.com/","image":"https://motionvisualmedia.com/assets/deangelo_chair.jpg","description":"Charlotte-based brand film production, commercial photography, executive portraits, and ongoing content production for founders, professional practices, and growing businesses.","address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"},"areaServed":["Charlotte","North Carolina","United States"],"priceRange":"$$$","parentOrganization":{"@id":"https://motionvisualmedia.com/#organization"}},
+    {"@type":"WebSite","@id":"https://motionvisualmedia.com/#website","url":"https://motionvisualmedia.com/","name":"Motion Visual Media","publisher":{"@id":"https://motionvisualmedia.com/#organization"}},
+    {"@type":"Person","@id":"https://motionvisualmedia.com/#jeremy","name":"Jeremy McKellar","jobTitle":"Founder and Director","worksFor":{"@id":"https://motionvisualmedia.com/#organization"},"url":"https://motionvisualmedia.com/#about"}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -219,6 +231,10 @@
   /* ABOUT */
   .about-section{position:relative;margin-top:clamp(28px,5vw,72px);border-top:1px solid var(--line-2);background:linear-gradient(180deg,var(--bg-soft),transparent 34%)}
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+  .faq-grid{max-width:900px;margin:0 auto;border-top:1px solid var(--line)}
+  .faq{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;list-style:none;padding:22px 4px;font-family:var(--display);font-size:clamp(19px,2vw,25px);display:flex;justify-content:space-between;gap:24px;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';font-family:var(--sans);font-size:20px;color:var(--accent)}.faq[open] summary::after{content:'×'}.faq p{color:var(--ink-mute);font-size:15px;padding:0 36px 24px 4px}
   .about-img{aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);position:relative}
   .about-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.93)}
   .about-grid h2{font-size:clamp(32px,4vw,54px);margin:18px 0 22px}
@@ -361,7 +377,7 @@
       <div class="hero-copy">
         <span class="eyebrow">Photo + Film for Brands · Charlotte, NC</span>
         <h1>Photo and film that make your business easier to <em>trust.</em></h1>
-        <p class="lead">Motion Visual Media creates brand films, photography, and ongoing content for founders and teams in Charlotte.</p>
+        <p class="lead">Motion Visual Media is a Charlotte-based brand film and photography studio for founders, professional practices, and growing businesses that need stronger visual communication.</p>
         <div class="hero-cta">
           <a href="#work" class="btn btn-solid">View the Work</a>
           <a href="#contact" class="btn btn-ghost">Start a Project</a>
@@ -409,9 +425,9 @@
       <p>Choose the kind of support you need. We will shape the scope after the first conversation.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc reveal"><span class="num">Starting at $1,500</span><h3>Brand Films</h3><p>A focused film for a launch, founder story, or important business moment.</p><a href="#contact" class="offer-link">Start a film project →</a></div>
-      <div class="svc featured reveal"><span class="num">Starting at $5,000 monthly</span><h3>Ongoing Content</h3><p>Regular production for founders and teams who need useful photo and video each month.</p><a href="#contact" class="offer-link">Discuss ongoing content →</a></div>
-      <div class="svc reveal"><span class="num">Starting at $1,250</span><h3>Brand Photography</h3><p>Portraits, workplace images, and product photography for websites, press, and campaigns.</p><a href="#contact" class="offer-link">Plan a photo project →</a></div>
+      <div class="svc reveal"><span class="num">Starting at $1,500</span><h3>Brand Films</h3><p>A focused film for a launch, founder story, or important business moment.</p><a href="/brand-films-charlotte" class="offer-link">Explore brand films →</a></div>
+      <div class="svc featured reveal"><span class="num">Starting at $5,000 monthly</span><h3>Ongoing Content</h3><p>Regular production for founders and teams who need useful photo and video each month.</p><a href="/ongoing-content-charlotte" class="offer-link">Explore ongoing content →</a></div>
+      <div class="svc reveal"><span class="num">Starting at $1,250</span><h3>Brand Photography</h3><p>Portraits, workplace images, and product photography for websites, press, and campaigns.</p><a href="/brand-photography-charlotte" class="offer-link">Explore photography →</a></div>
     </div>
     <p class="simple-process">Every project follows a simple path: scope, plan, create, deliver.</p>
   </section>
@@ -487,6 +503,15 @@
       <p>If you have a project in mind, tell me what you are working on.</p>
       <div class="sig">Jeremy McKellar<small>Founder &amp; Director · Charlotte, NC</small></div>
     </div>
+  </div>
+</section>
+
+<section class="wrap" id="faq">
+  <div class="sec-head reveal"><span class="eyebrow">Common Questions</span><h2>Before we make something together.</h2><p>A few straightforward answers about the work, pricing, and process.</p></div>
+  <div class="faq-grid">
+    <details class="faq reveal"><summary>What does Motion Visual Media do?</summary><p>Motion Visual Media creates brand films, founder videos, commercial photography, executive portraits, and ongoing photo and video content for businesses and people in Charlotte and beyond.</p></details>
+    <details class="faq reveal"><summary>How much does a project cost?</summary><p>Brand films start at $1,500, brand photography starts at $1,250, and ongoing content starts at $5,000 per month. Final scope depends on the goals and production needs.</p></details>
+    <details class="faq reveal"><summary>Where are you located?</summary><p>Motion Visual Media is based in Charlotte, North Carolina, and works in studio, on location, and remotely depending on the project.</p></details>
   </div>
 </section>
 
