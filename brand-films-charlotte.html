@@ -11,13 +11,86 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Brand Film Production in Charlotte","provider":{"@type":"Organization","name":"Motion Visual Media","url":"https://motionvisualmedia.com/"},"areaServed":"Charlotte, NC","offers":{"@type":"Offer","price":"1500","priceCurrency":"USD","description":"Starting price"}}</script>
+<style>
+  .brand-film-page .hero{padding-bottom:70px}
+  .brand-film-page .film-hero{margin:56px 0 0;overflow:hidden;background:var(--panel)}
+  .brand-film-page .film-hero img{display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center 48%}
+  .brand-film-page .film-caption{display:flex;justify-content:space-between;gap:20px;padding:13px 16px;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .brand-film-page .story-section{background:linear-gradient(180deg,rgba(21,35,27,.72),transparent 78%)}
+  .brand-film-page .story-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,.74fr);gap:48px;align-items:end}
+  .brand-film-page .story-heading h2{margin-bottom:0}
+  .brand-film-page .story-heading .intro{margin:0}
+  .brand-film-page .film-gallery{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:1fr 1fr;gap:16px;margin-top:48px}
+  .brand-film-page .film-frame{margin:0;overflow:hidden;background:var(--panel)}
+  .brand-film-page .film-frame img{display:block;width:100%;height:100%;object-fit:cover}
+  .brand-film-page .film-frame--audience{grid-row:span 2;min-height:540px}
+  .brand-film-page .film-frame--audience img{object-position:67% center}
+  .brand-film-page .film-frame--speaker img{object-position:53% center}
+  .brand-film-page .film-frame--room img{object-position:center center}
+  .brand-film-page .story-cta{display:flex;justify-content:space-between;gap:34px;align-items:end;margin-top:42px;padding-top:34px;border-top:1px solid var(--line)}
+  .brand-film-page .story-cta p{max-width:600px;margin:0;color:var(--muted);font-size:18px}
+  @media(max-width:720px){
+    .brand-film-page .hero{padding-bottom:56px}
+    .brand-film-page .film-hero{margin-top:40px}
+    .brand-film-page .film-hero img{aspect-ratio:4/3;object-position:56% center}
+    .brand-film-page .film-caption{padding:11px 12px;font-size:9px}
+    .brand-film-page .story-heading,.brand-film-page .story-cta{grid-template-columns:1fr;display:grid;gap:24px;align-items:start}
+    .brand-film-page .film-gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:10px;margin-top:34px}
+    .brand-film-page .film-frame--audience{grid-column:span 2;grid-row:auto;min-height:0;aspect-ratio:4/3}
+    .brand-film-page .film-frame:not(.film-frame--audience){aspect-ratio:1/1}
+    .brand-film-page .film-frame--speaker img{object-position:58% center}
+    .brand-film-page .story-cta{margin-top:32px;padding-top:28px}
+    .brand-film-page .story-cta .btn{width:100%;text-align:center}
+  }
+</style>
 </head>
-<body>
+<body class="brand-film-page">
 <nav class="site-nav"><a class="logo" href="/">Motion <b>Visual</b> Media</a><a class="nav-link" href="/#contact">Start a project →</a></nav>
 <main>
-<header class="hero"><div class="wrap"><span class="eyebrow">Brand films · Charlotte, NC</span><h1>Make the story behind the business impossible to miss.</h1><p>Motion Visual Media creates founder-led brand films, testimonials, and campaign stories for businesses that have outgrown generic content.</p><div class="actions"><a class="btn primary" href="/#contact">Plan a film</a><a class="btn" href="/">View selected work</a></div></div></header>
-<section class="section"><div class="wrap"><span class="eyebrow">A focused production</span><h2>One clear story. The right images to carry it.</h2><p class="intro">We shape the idea, plan the production, and capture the footage with the final audience in mind. The result is a film that can live on your site, in a launch, or across social without feeling like an afterthought.</p><div class="cards"><article class="card"><span class="price">From $1,500</span><h3>Brand film</h3><p>A cinematic film built around the founder, the work, and the reason the business matters.</p></article><article class="card"><h3>Founder features</h3><p>Interview-led pieces that help customers understand the person, perspective, and experience behind the company.</p></article><article class="card"><h3>Campaign assets</h3><p>Selected cut-downs and stills planned for the places your audience already spends time.</p></article></div></div></section>
-<section class="section"><div class="wrap"><span class="eyebrow">Common questions</span><div class="faq"><details><summary>What is the starting price?</summary><p>Brand films start at $1,500. Final scope depends on locations, production days, talent, travel, and the intended asset set.</p></details><details><summary>Do you help with the concept?</summary><p>Yes. We can help clarify the story, interview direction, visual references, production plan, and delivery needs before the shoot.</p></details><details><summary>Do you work outside Charlotte?</summary><p>Yes. Motion Visual Media is based in Charlotte and can travel for the right project.</p></details></div></div></section>
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Brand films · Charlotte, NC</span>
+      <h1>Make the story behind the business impossible to miss.</h1>
+      <p>Founder stories, customer voices, and campaign films for businesses that have outgrown generic content.</p>
+      <div class="actions"><a class="btn primary" href="/#contact">Plan a film</a><a class="btn" href="/">View selected work</a></div>
+      <figure class="film-hero">
+        <img src="assets/brand-films-keynote-speaker.jpg" alt="A speaker addresses a room with a microphone during a filmed event" fetchpriority="high">
+        <figcaption class="film-caption"><span>Brand stories, in the room</span><span>Motion Visual Media</span></figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">A focused production</span>
+      <h2>A story your audience can see themselves in.</h2>
+      <p class="intro">A strong brand film makes a business feel tangible. We find the human stakes, plan around the moments that matter, and shape the footage into a clear reason for the right people to pay attention.</p>
+      <div class="cards">
+        <article class="card"><span class="price">From $1,500</span><h3>Brand films</h3><p>A cinematic, story-led film built around the people, work, and point of view that make your business matter.</p></article>
+        <article class="card"><h3>Founder &amp; customer voices</h3><p>Interview-led pieces that make your experience, values, and credibility easier to understand and remember.</p></article>
+        <article class="card"><h3>Campaign cut-downs</h3><p>Focused edits and stills planned for the places your audience already spends time, from your site to social.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story-section">
+    <div class="wrap">
+      <div class="story-heading">
+        <div><span class="eyebrow">The story is in the room</span><h2>People make the work believable.</h2></div>
+        <p class="intro">The details that stay with an audience are often the quiet ones: a speaker making their case, a listener leaning in, a room reacting in real time.</p>
+      </div>
+      <div class="film-gallery" aria-label="Behind the scenes from a Motion Visual Media brand film production">
+        <figure class="film-frame film-frame--audience"><img src="assets/brand-films-audience-portrait.jpg" alt="Audience member listening attentively during a filmed event" loading="lazy"></figure>
+        <figure class="film-frame film-frame--speaker"><img src="assets/brand-films-speaker-detail.jpg" alt="Speaker sharing a message into a microphone during an event" loading="lazy"></figure>
+        <figure class="film-frame film-frame--room"><img src="assets/brand-films-audience-room.jpg" alt="Audience gathered in a lecture hall during a filmed event" loading="lazy"></figure>
+      </div>
+      <div class="story-cta"><p>If the next important chapter for your business needs to feel more human, memorable, and clear, let’s start with the story.</p><a class="btn primary" href="/#contact">Start a conversation</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap"><span class="eyebrow">Common questions</span><div class="faq"><details><summary>What is the starting price?</summary><p>Brand films start at $1,500. Final scope depends on locations, production days, talent, travel, and the intended asset set.</p></details><details><summary>Do you help with the concept?</summary><p>Yes. We can help clarify the story, interview direction, visual references, production plan, and delivery needs before the shoot.</p></details><details><summary>Do you work outside Charlotte?</summary><p>Yes. Motion Visual Media is based in Charlotte and can travel for the right project.</p></details></div></div>
+  </section>
 </main>
 <footer class="footer"><div class="wrap">Motion Visual Media · Charlotte, NC · <a href="mailto:hello@motionvisualmedia.com">hello@motionvisualmedia.com</a></div></footer>
 </body>
