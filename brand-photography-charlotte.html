@@ -7,6 +7,7 @@
 <meta name="description" content="Executive portraits, personal brand photography, and commercial imagery in Charlotte, NC by Motion Visual Media.">
 <link rel="canonical" href="https://motionvisualmedia.com/brand-photography-charlotte">
 <link rel="stylesheet" href="service-pages.css">
+<link rel="stylesheet" href="site-navigation.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -56,8 +57,9 @@
   }
 </style>
 </head>
-<body class="brand-photography-page">
-<nav class="site-nav"><a class="logo" href="/">Motion <b>Visual</b> Media</a><a class="nav-link" href="/#contact">Start a project →</a></nav>
+<body class="brand-photography-page has-mvm-site-header">
+<nav class="mvm-site-header" data-mvm-header data-mvm-menu="brandPhotographyMenu"><a class="mvm-logo" href="/" aria-label="Motion Visual Media home"><img src="assets/mvm-logo-wordmark.png" alt="Motion Visual Media"></a><div class="mvm-navlinks"><a href="/#work">Work</a><a href="/#services">Services</a><a href="/#portrait-work">Portraits</a><a href="/#shows">Shows</a><a href="/#about">About</a><details class="mvm-more"><summary>Additional Offerings</summary><div class="mvm-dropdown"><a href="/proud-to-pay">Proud to Pay <span aria-hidden="true">🏁</span></a><a href="https://headshots.motionvisualmedia.com" target="_blank" rel="noopener">Virtual Professional Headshots</a></div></details></div><div class="mvm-nav-right"><a class="mvm-nav-cta" href="/#contact">Start a Project</a><button class="mvm-burger" type="button" data-mvm-burger aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<div class="mvm-mobile-menu" id="brandPhotographyMenu"><div class="mvm-current-context"><span class="mvm-camera" aria-hidden="true">📷</span><span>Now viewing</span><strong>Brand Photography</strong></div><a href="/#work">Work</a><div class="mvm-services"><div class="mvm-services-trigger"><a href="/#services">Services</a><button class="mvm-services-toggle" type="button" data-mvm-services-toggle aria-label="Show service pages" aria-expanded="false" aria-controls="brandPhotographyServices">+</button></div><div class="mvm-service-links" id="brandPhotographyServices"><div><a href="/brand-films-charlotte">Brand Films</a><a class="is-current" href="/brand-photography-charlotte" aria-current="page">Brand Photography</a><a href="/ongoing-content-charlotte">Ongoing Content</a></div></div></div><a href="/#portrait-work">Portraits</a><a href="/#shows">Shows</a><a href="/#about">About</a><a href="/#contact">Start a Project →</a><div class="mvm-mobile-extra"><span class="eyebrow">Additional Offerings</span><a href="/proud-to-pay">Proud to Pay 🏁</a><a href="https://headshots.motionvisualmedia.com" target="_blank" rel="noopener">Virtual Professional Headshots</a></div><div class="mvm-mobile-contact"><span class="eyebrow">Get in touch</span><a href="mailto:hello@motionvisualmedia.com">hello@motionvisualmedia.com</a></div></div>
 <main>
   <header class="hero">
     <div class="wrap">
@@ -110,5 +112,6 @@
   <section class="section"><div class="wrap"><span class="eyebrow">Common questions</span><div class="faq"><details><summary>What is the starting price?</summary><p>Executive brand photography starts at $1,250. The final quote depends on the number of looks, locations, people, and intended usage.</p></details><details><summary>Can you direct people who are uncomfortable on camera?</summary><p>Yes. Clear direction is part of the work. The goal is to create photographs that feel like you, not stiff poses you have to perform.</p></details><details><summary>Can photography be combined with video?</summary><p>Yes. Combined photo and video campaigns can be scoped when the same story or production day needs to serve multiple channels.</p></details></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">Motion Visual Media · Charlotte, NC · <a href="mailto:hello@motionvisualmedia.com">hello@motionvisualmedia.com</a></div></footer>
+<script src="site-navigation.js" defer></script>
 </body>
 </html>
