@@ -1,0 +1,46 @@
+.inquiry-page{background:var(--bg)}
+.inquiry-hero{padding:88px 0 96px;background:radial-gradient(80% 70% at 10% 8%,rgba(126,161,115,.15),transparent 62%)}
+.inquiry-layout{display:grid;grid-template-columns:minmax(0,.86fr) minmax(520px,1fr);gap:72px;align-items:start}
+.inquiry-intro{position:sticky;top:calc(var(--mvm-nav-height) + 42px)}
+.inquiry-intro h1{max-width:650px;margin:20px 0 24px;font-size:clamp(50px,6vw,82px)}
+.inquiry-intro .lede{max-width:640px;margin:0;color:var(--muted);font-size:19px}
+.fit-list{margin-top:46px;border-top:1px solid var(--line)}
+.fit-list article{display:grid;grid-template-columns:38px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.fit-list article>span{color:var(--accent);font-size:11px;letter-spacing:.16em}
+.fit-list h2{margin:0 0 5px;font:400 23px/1.15 var(--display)}
+.fit-list p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.starting-points{margin-top:32px;padding:20px 22px;background:var(--panel);border:1px solid var(--line)}
+.starting-points p{margin:8px 0 0;color:var(--muted);font-size:14px}
+.starting-points strong{color:var(--ink);font-weight:500}
+.inquiry-card{padding:42px;background:var(--bg-soft);border:1px solid var(--line);box-shadow:0 36px 90px -58px rgba(0,0,0,.8)}
+.form-heading h2,.form-success h2{margin:14px 0 12px;font-size:clamp(34px,4vw,52px)}
+.form-heading p,.form-success p{margin:0;color:var(--muted)}
+.project-form{margin-top:36px}
+.honeypot{display:none}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field>span{color:var(--ink);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.field small{color:var(--faint);font-size:10px;font-weight:400;letter-spacing:.04em}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:13px 14px;border:1px solid var(--line);border-radius:0;background:var(--bg);color:var(--ink);font:400 15px/1.35 var(--sans);outline:none;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:132px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--faint)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(169,195,160,.11)}
+.field select{appearance:auto}
+.form-foot{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-top:28px;padding-top:26px;border-top:1px solid var(--line)}
+.form-foot p{max-width:370px;margin:0;color:var(--muted);font-size:12px;line-height:1.6}
+.form-foot .btn{flex-shrink:0;cursor:pointer}
+.form-success{padding:70px 0}
+.form-success .btn{margin-top:26px}
+.next-steps{padding:82px 0;border-top:1px solid var(--line);background:var(--bg-soft)}
+.next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:30px;background:var(--line)}
+.next-grid article{padding:30px;background:var(--bg)}
+.next-grid strong{color:var(--accent);font-size:11px;letter-spacing:.16em}
+.next-grid h2{margin:14px 0 10px;font-size:26px}
+.next-grid p{margin:0;color:var(--muted);font-size:14px}
+@media(max-width:980px){
+  .inquiry-layout{grid-template-columns:1fr;gap:48px}.inquiry-intro{position:static}.inquiry-intro h1{max-width:780px}.fit-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}.fit-list article{display:block;padding:22px;background:var(--bg);border:0}.fit-list article>span{display:block;margin-bottom:13px}.starting-points{max-width:640px}.inquiry-card{padding:36px}
+}
+@media(max-width:720px){
+  .inquiry-hero{padding:58px 0 68px}.inquiry-layout{gap:36px}.inquiry-intro h1{font-size:clamp(42px,13vw,60px)}.inquiry-intro .lede{font-size:17px}.fit-list{grid-template-columns:1fr;margin-top:34px}.fit-list article{display:grid;grid-template-columns:34px 1fr;padding:18px}.starting-points{margin-top:24px}.inquiry-card{padding:26px 20px}.form-grid{grid-template-columns:1fr;gap:17px}.field.full{grid-column:auto}.form-foot{display:grid;align-items:start}.form-foot .btn{width:100%;text-align:center}.next-steps{padding:62px 0}.next-grid{grid-template-columns:1fr}.next-grid article{padding:24px}
+}

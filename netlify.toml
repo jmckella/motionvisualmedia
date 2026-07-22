@@ -35,3 +35,8 @@
   from = "/ongoing-content-charlotte"
   to = "/ongoing-content-charlotte.html"
   status = 200
+
+[[redirects]]
+  from = "/start-a-project"
+  to = "/start-a-project.html"
+  status = 200
