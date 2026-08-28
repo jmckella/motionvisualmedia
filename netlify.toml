@@ -40,3 +40,8 @@
   from = "/start-a-project"
   to = "/start-a-project.html"
   status = 200
+
+[[redirects]]
+  from = "/portraits"
+  to = "/portraits.html"
+  status = 200

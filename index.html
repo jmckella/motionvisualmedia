@@ -227,6 +227,8 @@
   .portrait-work-card img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .8s var(--ease)}
   .portrait-work-card:hover img{transform:scale(1.025)}
   .portrait-work-card .portrait-label{position:absolute;left:16px;bottom:16px;padding:8px 11px;border:0;border-radius:999px;background:rgba(13,22,17,.68);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+  .portrait-work-cta{display:flex;justify-content:center;margin-top:32px}
+  .portrait-work-cta a{display:inline-flex;align-items:center;gap:10px;padding-bottom:5px;border-bottom:1px solid var(--accent);color:var(--accent);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
 
   /* SHOWS */
   .shows-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -370,7 +372,7 @@
 <nav id="nav">
   <a href="#top" class="logo"><img src="assets/mvm-logo-wordmark.png" alt="Motion Visual Media" class="logo-img"></a>
   <div class="navlinks">
-    <a href="#work">Work</a><a href="#services">Services</a><a href="#portrait-work">Portraits</a><a href="#shows">Shows</a><a href="#about">About</a>
+    <a href="#work">Work</a><a href="#services">Services</a><a href="/portraits">Portraits</a><a href="#shows">Shows</a><a href="#about">About</a>
     <details class="nav-more">
       <summary>Additional Offerings</summary>
       <div class="nav-dropdown">
@@ -390,7 +392,7 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#work">Work</a><div class="mm-services"><div class="mm-services-trigger"><a href="#services">Services</a><button class="mm-services-toggle" id="mobileServicesToggle" type="button" aria-label="Show service pages" aria-expanded="false" aria-controls="mobileServiceLinks">+</button></div><div class="mm-service-links" id="mobileServiceLinks"><div><a href="/brand-photography-charlotte">Brand Photography</a><a href="/brand-films-charlotte">Brand Films</a><a href="/ongoing-content-charlotte">Ongoing Content</a></div></div></div><a href="#portrait-work">Portraits</a><a href="#shows">Shows</a><a href="#about">About</a>
+  <a href="#work">Work</a><div class="mm-services"><div class="mm-services-trigger"><a href="#services">Services</a><button class="mm-services-toggle" id="mobileServicesToggle" type="button" aria-label="Show service pages" aria-expanded="false" aria-controls="mobileServiceLinks">+</button></div><div class="mm-service-links" id="mobileServiceLinks"><div><a href="/brand-photography-charlotte">Brand Photography</a><a href="/brand-films-charlotte">Brand Films</a><a href="/ongoing-content-charlotte">Ongoing Content</a></div></div></div><a href="/portraits">Portraits</a><a href="#shows">Shows</a><a href="#about">About</a>
   <a href="/start-a-project">Start a Project <em>→</em></a>
   <div class="mm-additional"><span class="eyebrow">Additional Offerings</span><a href="/proud-to-pay">Proud to Pay <span aria-hidden="true">🏁</span></a><a href="https://headshots.motionvisualmedia.com" target="_blank" rel="noopener">Virtual Professional Headshots</a></div>
   <div class="mm-foot"><span class="eyebrow">Get in touch</span><a href="mailto:hello@motionvisualmedia.com">hello@motionvisualmedia.com</a></div>
@@ -472,17 +474,18 @@
 <section class="wrap portrait-work-section" id="portrait-work">
   <div class="sec-head reveal">
     <span class="eyebrow">Portrait Work</span>
-    <h2>Studio polish. Real personality.</h2>
-    <p>Headshots, personal brand portraits, and creative studio work.</p>
+    <h2>Portraits with presence.</h2>
+    <p>Editorial portraits, personal branding, and campaign-ready photography created in Charlotte.</p>
   </div>
   <div class="portrait-work-grid">
-    <figure class="portrait-work-card wide reveal"><img src="assets/portrait_fitness_yellow.jpg" alt="Fitness brand portrait on a yellow studio background" loading="lazy"><figcaption class="portrait-label">Fitness + Personal Brand</figcaption></figure>
+    <figure class="portrait-work-card wide reveal"><img src="assets/portraits/sydney-leah/sydney-seated-smile-960.webp" srcset="assets/portraits/sydney-leah/sydney-seated-smile-960.webp 640w, assets/portraits/sydney-leah/sydney-seated-smile-1800.webp 1200w" sizes="(max-width:720px) calc(100vw - 54px), 33vw" width="1200" height="1800" alt="Sydney Leah smiling while seated for a relaxed studio portrait" loading="lazy" decoding="async"><figcaption class="portrait-label">Editorial Portrait</figcaption></figure>
     <figure class="portrait-work-card reveal"><img src="assets/portrait_creative_blue.jpg" alt="Creative studio portrait on a blue background" loading="lazy"><figcaption class="portrait-label">Creative Portrait</figcaption></figure>
-    <figure class="portrait-work-card reveal"><img src="assets/portrait_corporate_woman.jpg" alt="Professional studio headshot of a woman" loading="lazy"><figcaption class="portrait-label">Executive Headshot</figcaption></figure>
-    <figure class="portrait-work-card reveal"><img src="assets/portrait_corporate_man.jpg" alt="Professional studio headshot of a man" loading="lazy"><figcaption class="portrait-label">Executive Headshot</figcaption></figure>
-    <figure class="portrait-work-card wide reveal"><img src="assets/portrait_executive_glasses.jpg" alt="Studio portrait of a woman in glasses" loading="lazy"><figcaption class="portrait-label">Studio Portrait</figcaption></figure>
+    <figure class="portrait-work-card reveal"><img src="assets/portraits/sydney-leah/sydney-black-suit-editorial-960.webp" srcset="assets/portraits/sydney-leah/sydney-black-suit-editorial-960.webp 640w, assets/portraits/sydney-leah/sydney-black-suit-editorial-1800.webp 1200w" sizes="(max-width:720px) calc(100vw - 54px), 33vw" width="1200" height="1800" alt="Sydney Leah seated in a black suit for an editorial portrait" loading="lazy" decoding="async"><figcaption class="portrait-label">Personal Brand</figcaption></figure>
+    <figure class="portrait-work-card reveal"><img src="assets/portrait_fitness_yellow.jpg" alt="Fitness brand portrait on a yellow studio background" loading="lazy"><figcaption class="portrait-label">Fitness + Personal Brand</figcaption></figure>
+    <figure class="portrait-work-card wide reveal"><img src="assets/portraits/sydney-leah/sydney-full-length-portrait-960.webp" srcset="assets/portraits/sydney-leah/sydney-full-length-portrait-960.webp 640w, assets/portraits/sydney-leah/sydney-full-length-portrait-1800.webp 1200w" sizes="(max-width:720px) calc(100vw - 54px), 33vw" width="1200" height="1800" alt="Full-length editorial portrait of Sydney Leah in a black suit" loading="lazy" decoding="async"><figcaption class="portrait-label">Editorial Portrait</figcaption></figure>
     <figure class="portrait-work-card wide reveal"><img src="assets/portrait_male_suit.jpg" alt="Professional portrait of a man in a suit" loading="lazy"><figcaption class="portrait-label">Professional Portrait</figcaption></figure>
   </div>
+  <div class="portrait-work-cta reveal"><a href="/portraits">View the portrait portfolio <span aria-hidden="true">→</span></a></div>
   <p class="rail-hint">Swipe or scroll to see more portrait work.</p>
 </section>
 
@@ -616,7 +619,7 @@
         <a href="#top" class="logo"><img src="assets/mvm-logo-wordmark.png" alt="Motion Visual Media" class="mark-img"><span class="full">Motion&nbsp;<b>Visual</b>&nbsp;Media</span></a>
         <p>Brand films, photography, and ongoing content from Charlotte, NC.</p>
       </div>
-      <div class="foot-col"><h4>Explore</h4><button class="foot-toggle" type="button" aria-expanded="false">Explore <span aria-hidden="true">+</span></button><div class="foot-links"><div><a href="#work">Work</a><a href="#services">Services</a><a href="#portrait-work">Portraits</a><a href="#shows">Shows</a><a href="#about">About</a></div></div></div>
+      <div class="foot-col"><h4>Explore</h4><button class="foot-toggle" type="button" aria-expanded="false">Explore <span aria-hidden="true">+</span></button><div class="foot-links"><div><a href="#work">Work</a><a href="#services">Services</a><a href="/portraits">Portraits</a><a href="#shows">Shows</a><a href="#about">About</a></div></div></div>
       <div class="foot-col"><h4>Connect</h4><button class="foot-toggle" type="button" aria-expanded="false">Connect <span aria-hidden="true">+</span></button><div class="foot-links"><div><a href="/start-a-project">Start a Project</a><a href="/proud-to-pay">Proud to Pay <span aria-hidden="true">🏁</span></a><a href="https://headshots.motionvisualmedia.com" target="_blank" rel="noopener">Virtual Professional Headshots</a><a href="mailto:hello@motionvisualmedia.com">Email</a><a href="https://www.instagram.com/motionvisualmedia/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/MotionVisualMedia/" target="_blank" rel="noopener">Facebook</a><a href="https://share.google/OE66E5vl8DPdtf6TE" target="_blank" rel="noopener">Google Business</a></div></div></div>
         <div class="social-links" aria-label="Motion Visual Media social links">
           <a class="social-link" href="https://www.instagram.com/motionvisualmedia/" target="_blank" rel="noopener" aria-label="Motion Visual Media on Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1-1.25-1.25A1.25 1.25 0 0 1 17.25 5.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 1-3-3Z"/></svg></a>
