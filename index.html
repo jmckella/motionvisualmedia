@@ -152,25 +152,51 @@
   .hero-shot:first-child,.hero-shot-secondary{aspect-ratio:16/9;width:100%}
   .hero-shot img{width:100%;height:100%;object-fit:cover}
   .hero-shot:first-child img{object-position:center center}
+  .hero-shot-label{position:absolute;z-index:2;top:14px;left:14px;padding:7px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(13,22,17,.62);color:#fff;font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
   /* On desktop, lift Sam's portrait just enough to keep the caption clear of his face. Mobile keeps its portrait framing below. */
   .hero-shot-secondary img{object-position:center 12%;transform:none}
-  .hero-proof-note{position:absolute;left:18px;bottom:18px;z-index:3;background:color-mix(in srgb,var(--bg) 82%,transparent);border:1px solid var(--line-2);border-radius:12px;padding:13px 16px;max-width:250px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-  .hero-proof-note strong{display:block;font-family:var(--display);font-size:18px;font-weight:400;color:var(--ink)}
-  .hero-proof-note span{display:block;color:var(--ink-faint);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+  .hero-proof-note{position:absolute;left:18px;bottom:18px;z-index:3;background:color-mix(in srgb,var(--bg) 88%,transparent);border:1px solid var(--line-2);border-radius:10px;padding:11px 14px;max-width:260px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+  .hero-proof-note strong{display:block;font-family:var(--display);font-size:16px;font-weight:400;color:var(--ink)}
+  .hero-proof-note span{display:block;color:var(--ink-faint);font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
   .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink-faint);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
   .scroll-cue .ln{width:1px;height:38px;background:linear-gradient(var(--accent),transparent);animation:cue 2s var(--ease) infinite}
   @keyframes cue{0%{transform:scaleY(0);transform-origin:top}40%{transform:scaleY(1);transform-origin:top}60%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  /* FULL-BLEED FEATURE REEL */
+  /* FEATURED BRAND FILM */
+  .feature-film-section{padding:clamp(62px,7vw,88px) 0 clamp(78px,9vw,112px);background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .feature-film-intro{display:grid;grid-template-columns:minmax(150px,.42fr) minmax(360px,1.25fr) minmax(260px,.75fr);gap:clamp(28px,4vw,64px);align-items:end;margin-bottom:clamp(36px,4vw,52px);padding-bottom:clamp(28px,3vw,40px);border-bottom:1px solid var(--line)}
+  .feature-film-intro h2{font-size:clamp(40px,4.1vw,58px);max-width:680px;margin:0;line-height:1.02}
+  .feature-film-intro>p{max-width:44ch;margin:0 0 4px;color:var(--ink-mute);font-size:15px}
+  .feature-film-card{display:grid;grid-template-columns:minmax(330px,.82fr) minmax(420px,1.18fr);gap:clamp(34px,6vw,82px);align-items:center}
+  .feature-film-poster{position:relative;display:block;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow);cursor:pointer;text-align:left;color:#fff}
+  .feature-film-poster img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center center;transition:transform .7s var(--ease)}
+  .feature-film-poster:hover img{transform:scale(1.018)}
+  .feature-film-poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(8,14,10,.78));pointer-events:none}
+  .feature-film-play{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;display:flex;align-items:center;gap:14px}
+  .feature-film-play .play-icon{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(8,14,10,.36);backdrop-filter:blur(10px)}
+  .feature-film-play svg{width:13px;height:13px;fill:currentColor;transform:translateX(1px)}
+  .feature-film-play strong,.feature-film-play small{display:block}.feature-film-play strong{font:500 11px var(--sans);letter-spacing:.14em;text-transform:uppercase}.feature-film-play small{margin-top:4px;color:rgba(255,255,255,.65);font-size:10px;letter-spacing:.08em}
+  .feature-film-copy h3{font-size:clamp(34px,4.2vw,58px);margin:17px 0 22px;max-width:760px}
+  .feature-film-copy>p{max-width:60ch;color:var(--ink-mute);font-size:16px;margin-bottom:28px}
+  .feature-film-outcomes{display:grid;grid-template-columns:repeat(2,1fr);margin:0 0 28px;border-top:1px solid var(--line)}
+  .feature-film-outcomes span{padding:13px 10px 13px 0;border-bottom:1px solid var(--line);color:var(--ink-mute);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  .feature-film-outcomes span:nth-child(odd){border-right:1px solid var(--line)}.feature-film-outcomes span:nth-child(even){padding-left:16px}
+  .feature-film-room{position:relative;margin:0;overflow:hidden;border-radius:10px;background:var(--panel)}
+  .feature-film-room img{width:100%;aspect-ratio:16/7;object-fit:cover;object-position:center 44%}
+  .feature-film-room figcaption{position:absolute;left:12px;bottom:10px;padding:7px 10px;border-radius:999px;background:rgba(8,14,10,.68);color:#fff;font-size:9px;letter-spacing:.13em;text-transform:uppercase;backdrop-filter:blur(10px)}
+  .film-viewer{position:fixed;inset:0;z-index:500;display:grid;place-items:center;padding:24px;opacity:0;visibility:hidden;transition:.3s var(--ease)}
+  .film-viewer.open{opacity:1;visibility:visible}.film-viewer-scrim{position:absolute;inset:0;background:rgba(3,7,4,.9);backdrop-filter:blur(8px)}
+  .film-viewer-card{position:relative;z-index:2;width:min(1120px,100%);background:#050806;border:1px solid rgba(255,255,255,.18);border-radius:10px;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.55)}
+  .film-viewer-bar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px 18px;color:#fff}
+  .film-viewer-bar span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .film-viewer-close{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:transparent;color:#fff;cursor:pointer}.film-viewer-close svg{width:14px;height:14px;stroke:currentColor;stroke-width:1.8}
+  .film-viewer iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
 
-  /* MARQUEE */
-  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;overflow:hidden;background:var(--bg-soft)}
-  .marquee-track{display:flex;width:max-content;white-space:nowrap;animation:marqueeMove 28s linear infinite;will-change:transform;transform:translate3d(0,0,0)}
-  .marquee-group{display:flex;flex-shrink:0}
-  .marquee-track span{font-family:var(--display);font-size:17px;color:var(--ink-faint);font-style:italic;display:flex;align-items:center;flex-shrink:0}
-  .marquee-track span::after{content:"·";margin:0 30px;color:var(--accent);font-style:normal}
-  @keyframes marqueeMove{to{transform:translate3d(-50%,0,0)}}
-  @media(prefers-reduced-motion:reduce){.marquee-track{animation-duration:60s!important}}
+  /* STATIC CAPABILITY BAR */
+  .capability-bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-soft)}
+  .capability-list{display:grid;grid-template-columns:repeat(4,1fr);padding-top:0;padding-bottom:0}
+  .capability-list span{display:flex;align-items:center;min-height:74px;padding:0 22px;border-right:1px solid var(--line);color:var(--ink-mute);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+  .capability-list span:first-child{padding-left:0}.capability-list span:last-child{padding-right:0;border-right:0}
 
   section{padding:clamp(88px,12vw,140px) 0}
   .sec-head{max-width:680px;margin:0 auto clamp(48px,6vw,72px);text-align:center}
@@ -336,6 +362,7 @@
     .hero-layout{grid-template-columns:1fr;gap:44px}.hero-copy{max-width:760px}.hero-proof{max-width:760px;min-height:0}
     .shows-grid{grid-template-columns:1fr}
     .about-grid{grid-template-columns:1fr;gap:40px}
+    .feature-film-intro{grid-template-columns:1fr;gap:22px}.feature-film-card{grid-template-columns:minmax(300px,.8fr) 1.2fr;gap:34px}
   }
   @media(max-width:760px){
     html{scroll-padding-top:76px}section[id],header[id]{scroll-margin-top:76px}
@@ -362,6 +389,8 @@
     .modal-card{max-width:100%;height:auto;max-height:90vh;border-radius:16px 16px 0 0;padding:60px 22px 32px;transform:none!important}
     .modal .modal-close{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:14px;background:var(--panel);z-index:6}
     .show-body{padding:22px}
+    .capability-list{grid-template-columns:repeat(2,1fr)}.capability-list span{min-height:56px;padding:0 12px;border-bottom:1px solid var(--line);font-size:8.5px}.capability-list span:nth-child(2){border-right:0}.capability-list span:nth-child(3){padding-left:0;border-bottom:0}.capability-list span:nth-child(4){border-right:0;border-bottom:0}
+    .feature-film-section{padding:56px 0 72px}.feature-film-intro{gap:16px;margin-bottom:32px;padding-bottom:28px}.feature-film-intro h2{font-size:clamp(36px,10.8vw,46px)}.feature-film-intro>p{font-size:14.5px}.feature-film-card{grid-template-columns:1fr;gap:34px}.feature-film-poster{max-width:540px;margin:0 auto}.feature-film-outcomes{grid-template-columns:1fr}.feature-film-outcomes span:nth-child(odd){border-right:0}.feature-film-outcomes span:nth-child(even){padding-left:0}.feature-film-room img{aspect-ratio:16/9}.film-viewer{padding:0;align-items:center}.film-viewer-scrim{background:rgba(3,7,4,.96);backdrop-filter:none;-webkit-backdrop-filter:none}.film-viewer-card{width:100%;max-width:100%;border-radius:0}.film-viewer-bar{padding:12px 14px}
   }
 </style>
 </head>
@@ -413,20 +442,51 @@
         </div>
       </div>
       <div class="hero-proof" aria-label="Recent Motion Visual Media work">
-        <div class="hero-shot"><img src="assets/deangelo_chair.jpg" alt="Film still of a founder seated in an auditorium"></div>
-        <div class="hero-shot hero-shot-secondary"><img src="assets/sam_blackmon_author.jpg" alt="Executive portrait photographed by Motion Visual Media"></div>
-        <div class="hero-proof-note"><strong>Real people. Real momentum.</strong><span>Film and photography for business</span></div>
+        <div class="hero-shot"><span class="hero-shot-label">Brand Film</span><img src="assets/deangelo_chair.jpg" alt="Film still of a founder seated in an auditorium"></div>
+        <div class="hero-shot hero-shot-secondary"><span class="hero-shot-label">Brand Photography</span><img src="assets/sam_blackmon_author.jpg" alt="Executive portrait photographed by Motion Visual Media"></div>
+        <div class="hero-proof-note"><strong>Film and photography</strong><span>Built to work together</span></div>
       </div>
     </div>
   </div>
 </header>
 
-<div class="marquee">
-  <div class="marquee-track">
-    <div class="marquee-group"><span>Founder Films</span><span>Brand Campaigns</span><span>Brand Photography</span><span>Ongoing Content</span><span>Product Photography</span><span>Select Events</span></div>
-    <div class="marquee-group" aria-hidden="true"><span>Founder Films</span><span>Brand Campaigns</span><span>Brand Photography</span><span>Ongoing Content</span><span>Product Photography</span><span>Select Events</span></div>
+<div class="capability-bar" aria-label="Motion Visual Media capabilities">
+  <div class="wrap capability-list">
+    <span>Brand Films</span><span>Brand Photography</span><span>Ongoing Content</span><span>Charlotte + Available to Travel</span>
   </div>
 </div>
+
+<!-- FEATURED BRAND FILM -->
+<section class="feature-film-section" id="featured-film">
+  <div class="wrap">
+    <div class="feature-film-intro reveal">
+      <span class="eyebrow">Featured Brand Film</span>
+      <h2>Show people the value behind the business.</h2>
+      <p>Film gives customers, partners, and future audiences a way to experience the expertise—not just read about it.</p>
+    </div>
+    <div class="feature-film-card">
+      <button class="feature-film-poster reveal" type="button" data-open-film aria-label="Watch the featured brand film">
+        <img src="assets/sly-stage.jpg" alt="Technology founder presenting to an audience from a podium">
+        <span class="feature-film-play">
+          <span class="play-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 2.8v10.4L13 8 4 2.8Z"/></svg></span>
+          <span><strong>Watch the film</strong><small>Speaker story · 04:08</small></span>
+        </span>
+      </button>
+      <div class="feature-film-copy reveal">
+        <span class="eyebrow">Project Proof · Film + Photography</span>
+        <h3>A keynote became a complete content library.</h3>
+        <p>One focused production captured the authority on stage, the energy in the room, and the human moments around the event—creating useful material for the website, speaking outreach, social content, and press.</p>
+        <div class="feature-film-outcomes" aria-label="Project deliverables">
+          <span>Featured speaker film</span><span>Event photography</span><span>Social-ready moments</span><span>Website and press assets</span>
+        </div>
+        <figure class="feature-film-room">
+          <img src="assets/sly-audience.jpg" alt="Audience gathered during the featured speaking engagement" loading="lazy">
+          <figcaption>Tech Simplified · University at Buffalo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WORK -->
 <section id="work" class="wrap">
@@ -461,8 +521,8 @@
       <p>Whether you need to explain the business, support an important launch, build a stronger image library, or show up consistently, start with the kind of support that fits.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc reveal"><span class="num">Starting at $1,250</span><h3>Brand Photography</h3><p>Portraits, workplace images, and product photography for websites, press, and campaigns.</p><a href="/brand-photography-charlotte" class="offer-link">Explore photography →</a></div>
       <div class="svc reveal"><span class="num">Starting at $2,500</span><h3>Brand Films</h3><p>A story-led film that helps the right people understand what you do, why it matters, and why they should trust you.</p><a href="/brand-films-charlotte" class="offer-link">Explore brand films →</a></div>
+      <div class="svc reveal"><span class="num">Starting at $1,250</span><h3>Brand Photography</h3><p>Portraits, workplace images, and product photography for websites, press, and campaigns.</p><a href="/brand-photography-charlotte" class="offer-link">Explore photography →</a></div>
       <div class="svc featured reveal"><span class="num">Starting at $5,000 monthly</span><h3>Ongoing Content</h3><p>Regular production for founders and teams who need useful photo and video each month.</p><a href="/ongoing-content-charlotte" class="offer-link">Explore ongoing content →</a></div>
     </div>
     <p class="simple-process">Every project follows a simple path: scope, plan, create, deliver.</p>
@@ -568,6 +628,26 @@
   </div>
 </section>
 
+<!-- FEATURED FILM VIEWER -->
+<div class="film-viewer" id="filmViewer" aria-hidden="true">
+  <div class="film-viewer-scrim" data-close-film></div>
+  <div class="film-viewer-card" role="dialog" aria-modal="true" aria-labelledby="filmViewerTitle">
+    <div class="film-viewer-bar">
+      <span id="filmViewerTitle">Featured Brand Film · Motion Visual Media</span>
+      <button class="film-viewer-close" type="button" data-close-film aria-label="Close featured film"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 3 10 10M13 3 3 13"/></svg></button>
+    </div>
+    <iframe
+      id="featuredFilm"
+      src="about:blank"
+      data-src="https://customer-93fnujwdh6707s9m.cloudflarestream.com/0570239d60e27496df1924ad3ece5f97/iframe?poster=https%3A%2F%2Fcustomer-93fnujwdh6707s9m.cloudflarestream.com%2F0570239d60e27496df1924ad3ece5f97%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+      loading="lazy"
+      title="Featured brand film produced by Motion Visual Media"
+      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div class="modal" id="intakeModal" aria-hidden="true">
   <div class="modal-scrim" id="modalScrim"></div>
@@ -650,7 +730,12 @@
   function openModal(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
   function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
   openBtn.addEventListener('click',openModal);closeBtn.addEventListener('click',closeModal);scrim.addEventListener('click',closeModal);
-  addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal()});
+  const filmViewer=document.getElementById('filmViewer'),featuredFilm=document.getElementById('featuredFilm');
+  function openFilm(){if(featuredFilm.getAttribute('src')==='about:blank')featuredFilm.setAttribute('src',featuredFilm.dataset.src);filmViewer.classList.add('open');filmViewer.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+  function closeFilm(){featuredFilm.setAttribute('src','about:blank');filmViewer.classList.remove('open');filmViewer.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+  document.querySelectorAll('[data-open-film]').forEach(btn=>btn.addEventListener('click',openFilm));
+  document.querySelectorAll('[data-close-film]').forEach(btn=>btn.addEventListener('click',closeFilm));
+  addEventListener('keydown',e=>{if(e.key==='Escape'){if(modal.classList.contains('open'))closeModal();if(filmViewer.classList.contains('open'))closeFilm()}});
   document.querySelectorAll('a[href="#contact"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();closeMenu();openModal()}));
   document.querySelectorAll('a[href^="#"]:not([href="#contact"])').forEach(a=>a.addEventListener('click',e=>{
     const target=document.querySelector(a.getAttribute('href'));
@@ -686,11 +771,6 @@
     workRailPrev.addEventListener('click',()=>stepWorkRail(-1));
     workRailNext.addEventListener('click',()=>stepWorkRail(1));
     syncWorkRail();
-  }
-  const heroBg=document.getElementById('heroBg');
-  if(!reduce){
-    let ticking=false;
-    addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=scrollY;if(heroBg&&y<900)heroBg.style.transform='translateY('+(y*0.12)+'px)';ticking=false})},{passive:true});
   }
 </script>
 </body>
