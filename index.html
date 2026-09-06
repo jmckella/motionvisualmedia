@@ -253,6 +253,8 @@
   .portrait-work-card img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .8s var(--ease)}
   .portrait-work-card.morgan-brand-card img{object-position:70% center}
   .portrait-work-card.morgan-brand-card .portrait-label{left:auto;right:16px}
+  .portrait-study-link{display:block;width:100%;height:100%}
+  .portrait-study-link:focus-visible{outline:3px solid var(--accent);outline-offset:-4px}
   .portrait-work-card:hover img{transform:scale(1.025)}
   .portrait-work-card .portrait-label{position:absolute;left:16px;bottom:16px;padding:8px 11px;border:0;border-radius:999px;background:rgba(13,22,17,.68);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#fff}
   .portrait-work-cta{display:flex;justify-content:center;margin-top:32px}
@@ -539,9 +541,9 @@
     <p>Editorial portraits, personal branding, and campaign-ready photography created in Charlotte.</p>
   </div>
   <div class="portrait-work-grid">
-    <figure class="portrait-work-card wide reveal"><img src="assets/portraits/sydney-leah/sydney-seated-smile-960.webp" srcset="assets/portraits/sydney-leah/sydney-seated-smile-960.webp 640w, assets/portraits/sydney-leah/sydney-seated-smile-1800.webp 1200w" sizes="(max-width:720px) calc(100vw - 54px), 33vw" width="1200" height="1800" alt="Sydney Leah smiling while seated for a relaxed studio portrait" loading="lazy" decoding="async"><figcaption class="portrait-label">Editorial Portrait</figcaption></figure>
+    <figure class="portrait-work-card wide reveal"><a class="portrait-study-link" href="/portraits#sydney-study" aria-label="View Sydney Leah’s portrait session"><img src="assets/portraits/sydney-leah/sydney-seated-smile-960.webp" srcset="assets/portraits/sydney-leah/sydney-seated-smile-960.webp 640w, assets/portraits/sydney-leah/sydney-seated-smile-1800.webp 1200w" sizes="(max-width:720px) calc(100vw - 54px), 33vw" width="1200" height="1800" alt="Sydney Leah smiling while seated for a relaxed studio portrait" loading="lazy" decoding="async"><span class="portrait-label">Editorial Portrait</span></a></figure>
     <figure class="portrait-work-card reveal"><img src="assets/portrait_creative_blue.jpg" alt="Creative studio portrait on a blue background" loading="lazy"><figcaption class="portrait-label">Creative Portrait</figcaption></figure>
-    <figure class="portrait-work-card morgan-brand-card reveal"><img src="assets/portraits/morgan-miller/morgan-cream-blazer-seated-final-960.webp" srcset="assets/portraits/morgan-miller/morgan-cream-blazer-seated-final-960.webp 960w, assets/portraits/morgan-miller/morgan-cream-blazer-seated-final-1800.webp 1800w" sizes="(max-width:720px) calc(100vw - 54px), 33vw" width="1800" height="1200" alt="Morgan Miller seated in a cream blazer for a personal-brand portrait" loading="lazy" decoding="async"><figcaption class="portrait-label" style="left:auto;right:16px">Personal Brand Portrait</figcaption></figure>
+    <figure class="portrait-work-card morgan-brand-card reveal"><a class="portrait-study-link" href="/portraits#morgan-study" aria-label="View Morgan Miller’s portrait session"><img src="assets/portraits/morgan-miller/morgan-cream-blazer-seated-final-960.webp" srcset="assets/portraits/morgan-miller/morgan-cream-blazer-seated-final-960.webp 960w, assets/portraits/morgan-miller/morgan-cream-blazer-seated-final-1800.webp 1800w" sizes="(max-width:720px) calc(100vw - 54px), 33vw" width="1800" height="1200" alt="Morgan Miller seated in a cream blazer for a personal-brand portrait" loading="lazy" decoding="async"><span class="portrait-label" style="left:auto;right:16px">Personal Brand Portrait</span></a></figure>
     <figure class="portrait-work-card reveal"><img src="assets/portrait_fitness_yellow.jpg" alt="Fitness brand portrait on a yellow studio background" loading="lazy"><figcaption class="portrait-label">Fitness + Personal Brand</figcaption></figure>
     <figure class="portrait-work-card wide reveal"><img src="assets/portrait_executive_glasses.jpg" alt="Studio portrait of a woman in glasses" loading="lazy"><figcaption class="portrait-label">Studio Portrait</figcaption></figure>
     <figure class="portrait-work-card wide reveal"><img src="assets/portrait_male_suit.jpg" alt="Professional portrait of a man in a suit" loading="lazy"><figcaption class="portrait-label">Professional Portrait</figcaption></figure>
@@ -665,11 +667,11 @@
       <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="intake-grid">
         <label class="fld"><span>Name</span><input type="text" name="name" required placeholder="Your full name"></label>
-        <label class="fld"><span>Email</span><input type="email" name="email" required placeholder="you@company.com"></label>
-        <label class="fld"><span>Company / Brand</span><input type="text" name="company" required placeholder="What you're building"></label>
+        <label class="fld"><span>Email</span><input type="email" name="email" required placeholder="you@example.com"></label>
+        <label class="fld"><span>Company / Brand (optional)</span><input type="text" name="company" placeholder="What you're building"></label>
         <label class="fld"><span>Website or Instagram</span><input type="text" name="link" placeholder="So we can see your world"></label>
         <label class="fld full"><span>How would you like to work together?</span>
-          <select name="audience" required><option value="" disabled selected>Select the closest fit</option><option value="business-founder">I am a business or founder looking to hire Motion Visual Media</option><option value="agency-producer">I am an agency or producer looking for a creative production partner</option><option value="creative-collaborator">I am a creative interested in collaborating</option><option value="other">Something else</option></select>
+          <select name="audience" required><option value="" disabled selected>Select the closest fit</option><option value="individual">I am an individual looking for portraits or personal brand photos</option><option value="business-founder">I am a business or founder looking to hire Motion Visual Media</option><option value="agency-producer">I am an agency or producer looking for a creative production partner</option><option value="creative-collaborator">I am a creative interested in collaborating</option><option value="other">Something else</option></select>
         </label>
         <label class="fld"><span>Project budget</span>
           <select name="budget"><option value="" selected>Select a range (optional)</option><option>Under $2,500</option><option>$2,500 to $5,000</option><option>$5,000 to $10,000</option><option>$10,000 to $25,000</option><option>$25,000+</option></select>
@@ -683,7 +685,7 @@
         <label class="fld"><span>How'd you hear about us? (optional)</span>
           <select name="referral"><option value="" selected>Select one</option><option>Referral / word of mouth</option><option>LinkedIn</option><option>Instagram / Threads</option><option>Google / search</option><option>In Good Connects</option><option>Other</option></select>
         </label>
-        <label class="fld full"><span>What do you need people to understand, feel, or do?</span><textarea name="details" rows="4" required placeholder="Tell us about the business, the audience, the challenge, and what a useful result would look like."></textarea></label>
+        <label class="fld full"><span>Tell us about the photos or film you need.</span><textarea name="details" rows="4" required placeholder="For example: portraits for your website, updated headshots, or a film about your business. Share any ideas and where you plan to use the work."></textarea></label>
       </div>
       <div class="intake-foot">
         <p class="fineprint">Brand films begin at $2,500, brand photography at $1,250, and ongoing content partnerships at $5,000 per month. Final scope depends on the goal and production needs.</p>
